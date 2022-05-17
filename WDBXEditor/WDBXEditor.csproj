@@ -471,6 +471,10 @@
     <Content Include="Definitions\WoD 6.2.4 %2821742%29.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Definitions\Ascension 3.3.5 %2812341%29.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Definitions\WotLK 3.3.5 %2812340%29.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>

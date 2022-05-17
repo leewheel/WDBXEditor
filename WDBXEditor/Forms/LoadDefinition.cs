@@ -123,6 +123,13 @@ namespace WDBXEditor
             }
 
             SetFileText();
+
+            // @robinsch: auto select Ascension 3.3.5
+            // try to select table from current dbc
+            int index = lbDefinitions.FindStringExact("Ascension 3.3.5 (12341)");
+            if (index != -1)
+                lbDefinitions.SelectedIndex = index;
+
             lbDefinitions.EndUpdate();
         }
 

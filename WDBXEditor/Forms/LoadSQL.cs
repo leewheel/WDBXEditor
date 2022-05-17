@@ -42,6 +42,7 @@ namespace WDBXEditor
             {  "MapDifficulty",         "dbc_map_difficulty" },
             {  "PvpDifficulty",         "dbc_pvp_difficulty" },
             {  "SkillLine",             "dbc_skill_line" },
+            {  "Spell",                 "spell" },
             {  "SpellItemEnchantment",  "dbc_spell_item_enchantment" },
             {  "SpellShapeshiftForm",   "dbc_spell_shapeshift_form" },
             {  "SpellIcon",             "dbc_spellicon" },
@@ -79,8 +80,8 @@ namespace WDBXEditor
                 // try to select database from settings
                 LoadDatabase();
 
-                // try to select table from current dbc
-                if (AscensionDBCTables.ContainsKey(Entry.TableStructure.Name))
+                // @robinsch: if we have ascension definitions loaded we try to select server side dbc tables
+                if (Entry.Build == ((int)WDBXEditor.Common.Constants.ExpansionFinalBuild.Ascension) && AscensionDBCTables.ContainsKey(Entry.TableStructure.Name))
                 {
                     int i = ddlTable.FindStringExact(AscensionDBCTables[Entry.TableStructure.Name]);
                     if (i != -1)
@@ -88,6 +89,7 @@ namespace WDBXEditor
                 }
                 else
                 {
+                    // try to select table from current dbc
                     int index = ddlTable.FindStringExact($"db_{Entry.TableStructure.Name.ToLower()}_{Entry.Build}");
                     if (index != -1)
                         ddlTable.SelectedIndex = index;
