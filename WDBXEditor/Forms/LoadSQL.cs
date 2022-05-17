@@ -23,6 +23,34 @@ namespace WDBXEditor
 
         private bool testedconnection = false;
 
+        private Dictionary<String, String> AscensionDBCTables = new Dictionary<String, String>(StringComparer.OrdinalIgnoreCase) {
+            {  "Achievement",           "dbc_achievement" },
+            {  "Achievement_Criteria",  "dbc_achievement_criteria" },
+            {  "AreaTable",             "dbc_area_table" },
+            {  "CreatureFamily",        "dbc_creature_family" },
+            {  "CreatureType",          "dbc_creature_type" },
+            {  "CurrencyCategory",      "dbc_currency_category" },
+            {  "CurrencyTypes",         "dbc_currency_types" },
+            {  "DungeonEncounter",      "dbc_dungeon_encounter" },
+            {  "Faction",               "dbc_faction" },
+            {  "FactionTemplate",       "dbc_faction_template" },
+            {  "Holidays",              "dbc_holidays" },
+            {  "ItemExtendedCost",      "dbc_item_extended_cost" },
+            {  "LFGDungeons",           "dbc_lfg_dungeons" },
+            {  "Lock",                  "dbc_lock" },
+            {  "Map",                   "dbc_map" },
+            {  "MapDifficulty",         "dbc_map_difficulty" },
+            {  "PvpDifficulty",         "dbc_pvp_difficulty" },
+            {  "SkillLine",             "dbc_skill_line" },
+            {  "SpellItemEnchantment",  "dbc_spell_item_enchantment" },
+            {  "SpellShapeshiftForm",   "dbc_spell_shapeshift_form" },
+            {  "SpellIcon",             "dbc_spellicon" },
+            {  "SpellVisual",           "dbc_spellvisual" },
+            {  "Talent",                "dbc_talent" },
+            {  "TalentTab",             "dbc_talent_tab" },
+            {  "WorldSafeLocs",         "dbc_world_safe_locs" },
+        };
+
         public LoadSQL()
         {
             InitializeComponent();
@@ -52,9 +80,18 @@ namespace WDBXEditor
                 LoadDatabase();
 
                 // try to select table from current dbc
-                int index = ddlTable.FindStringExact($"db_{Entry.TableStructure.Name.ToLower()}_{Entry.Build}");
-                if (index != -1)
-                    ddlTable.SelectedIndex = index;
+                if (AscensionDBCTables.ContainsKey(Entry.TableStructure.Name))
+                {
+                    int i = ddlTable.FindStringExact(AscensionDBCTables[Entry.TableStructure.Name]);
+                    if (i != -1)
+                        ddlTable.SelectedIndex = i;
+                }
+                else
+                {
+                    int index = ddlTable.FindStringExact($"db_{Entry.TableStructure.Name.ToLower()}_{Entry.Build}");
+                    if (index != -1)
+                        ddlTable.SelectedIndex = index;
+                }
             }
         }
 
