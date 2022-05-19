@@ -789,6 +789,16 @@ namespace WDBXEditor.Storage
 			{
 				try
 				{
+					// @robinsch: ascension needs to run spell player patch query before importing
+					if (table == "spell_player_patch")
+                    {
+						MySqlCommand cmd = new MySqlCommand("UpdateSpellPlayerPatch", connection);
+						cmd.CommandType = CommandType.StoredProcedure;
+						cmd.Connection.Open();
+						cmd.ExecuteNonQuery();
+						cmd.Connection.Close();
+					}
+
 					adapter.FillSchema(importTable, SchemaType.Source); //Enforce schema
 					adapter.Fill(importTable);
 				}

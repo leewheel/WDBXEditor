@@ -42,7 +42,7 @@ namespace WDBXEditor
             {  "MapDifficulty",         "dbc_map_difficulty" },
             {  "PvpDifficulty",         "dbc_pvp_difficulty" },
             {  "SkillLine",             "dbc_skill_line" },
-            {  "Spell",                 "spell" },
+            {  "Spell",                 "spell_player_patch" },
             {  "SpellItemEnchantment",  "dbc_spell_item_enchantment" },
             {  "SpellShapeshiftForm",   "dbc_spell_shapeshift_form" },
             {  "SpellIcon",             "dbc_spellicon" },
