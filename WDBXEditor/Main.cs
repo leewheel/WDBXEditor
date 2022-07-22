@@ -848,8 +848,7 @@ namespace WDBXEditor
 		/// <param name="e"></param>
 		private void fromSQLToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (!IsLoaded)
-				loadFilesToolStripMenuItem_Click(sender, e);
+			if (!IsLoaded) return;
 
 			using (var importSql = new LoadSQL() { Entry = LoadedEntry })
 			{
