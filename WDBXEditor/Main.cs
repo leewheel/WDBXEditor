@@ -848,7 +848,11 @@ namespace WDBXEditor
 		/// <param name="e"></param>
 		private void fromSQLToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (!IsLoaded) return;
+			if (!IsLoaded)
+			{
+				MessageBox.Show("Open a file first.");
+				return;
+			}
 
 			using (var importSql = new LoadSQL() { Entry = LoadedEntry })
 			{
