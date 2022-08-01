@@ -18,6 +18,35 @@ namespace WDBXEditor.ConsoleHandler
 {
     class ConsoleCommands
     {
+        private static Dictionary<String, String> AscensionDBCTables = new Dictionary<String, String>(StringComparer.OrdinalIgnoreCase) {
+            {  "Achievement",           "dbc_achievement" },
+            {  "Achievement_Criteria",  "dbc_achievement_criteria" },
+            {  "AreaTable",             "dbc_area_table" },
+            {  "CreatureFamily",        "dbc_creature_family" },
+            {  "CreatureType",          "dbc_creature_type" },
+            {  "CurrencyCategory",      "dbc_currency_category" },
+            {  "CurrencyTypes",         "dbc_currency_types" },
+            {  "DungeonEncounter",      "dbc_dungeon_encounter" },
+            {  "Faction",               "dbc_faction" },
+            {  "FactionTemplate",       "dbc_faction_template" },
+            {  "Holidays",              "dbc_holidays" },
+            {  "ItemExtendedCost",      "dbc_item_extended_cost" },
+            {  "LFGDungeons",           "dbc_lfg_dungeons" },
+            {  "Lock",                  "dbc_lock" },
+            {  "Map",                   "dbc_map" },
+            {  "MapDifficulty",         "dbc_map_difficulty" },
+            {  "PvpDifficulty",         "dbc_pvp_difficulty" },
+            {  "SkillLine",             "dbc_skill_line" },
+            {  "Spell",                 "spell_player_patch" },
+            {  "SpellItemEnchantment",  "dbc_spell_item_enchantment" },
+            {  "SpellShapeshiftForm",   "dbc_spell_shapeshift_form" },
+            {  "SpellIcon",             "dbc_spellicon" },
+            {  "SpellVisual",           "dbc_spellvisual" },
+            {  "Talent",                "dbc_talent" },
+            {  "TalentTab",             "dbc_talent_tab" },
+            {  "WorldSafeLocs",         "dbc_world_safe_locs" },
+        };
+
         #region Load
         /// <summary>
         /// Loads a file into the console
@@ -268,8 +297,13 @@ namespace WDBXEditor.ConsoleHandler
 
             var entry = Database.Entries[0];
 
+            // @robinsch: if we have ascension definitions loaded we try to select server side dbc tables
+            var table = $"db_{entry.TableStructure.Name.ToLower()}_{entry.Build}";
+            if (entry.Build == ((int)WDBXEditor.Common.Constants.ExpansionFinalBuild.Ascension) && AscensionDBCTables.ContainsKey(entry.TableStructure.Name))
+                table = AscensionDBCTables[entry.TableStructure.Name];
+
             string importError = string.Empty;
-            if (!entry.ImportSQL(mode, connection, $"db_{entry.TableStructure.Name.ToLower()}_{entry.Build}", out importError))
+            if (!entry.ImportSQL(mode, connection, table, out importError))
             {
                 var dbcFileName = ParamCheck<string>(pmap, "-f");
                 throw new Exception($"   Error importing SQL into {dbcFileName}: {importError}");
