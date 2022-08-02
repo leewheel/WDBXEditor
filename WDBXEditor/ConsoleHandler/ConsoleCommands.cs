@@ -290,7 +290,19 @@ namespace WDBXEditor.ConsoleHandler
         public static void SqlLoadArgCommand(string[] args)
         {
             var pmap = ConsoleManager.ParseCommand(args);
+
             string connection = ParamCheck<string>(pmap, "-c");
+            if (connection == "config")
+            {
+                var host = Properties.Settings.Default["Host"].ToString();
+                var port = Properties.Settings.Default["Port"].ToString();
+                var database = Properties.Settings.Default["Database"].ToString();
+                var user = Properties.Settings.Default["User"].ToString();
+                var password = Properties.Settings.Default["Password"].ToString();
+
+                connection = $"Server={host}:{port};Database={database};Uid={user};Pwd={password};";
+            }
+
             UpdateMode mode = ParamCheck<UpdateMode>(pmap, "-m");
 
             LoadCommand(args);
