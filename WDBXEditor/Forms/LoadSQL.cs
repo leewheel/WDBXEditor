@@ -233,6 +233,10 @@ namespace WDBXEditor
             {
                 MessageBox.Show(ex.Message);
             }
+            catch (System.TimeoutException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
