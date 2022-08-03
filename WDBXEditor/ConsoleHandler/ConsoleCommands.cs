@@ -397,7 +397,7 @@ namespace WDBXEditor.ConsoleHandler
         {
             var pmap = ConsoleManager.ParseCommand(args);
 
-            string connection = ParamCheck<string>(pmap, "-c");
+            string connection = ParamCheck<string>(pmap, "-c", false);
 
             string connection_file = ParamCheck<string>(pmap, "-cf");
             if (connection_file.Length > 0)
