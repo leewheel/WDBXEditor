@@ -264,6 +264,10 @@ namespace WDBXEditor.ConsoleHandler
             string connection = ParamCheck<string>(pmap, "-c");
             UpdateMode mode = ParamCheck<UpdateMode>(pmap, "-m");
 
+            string connectionFile = ParamCheck<string>(pmap, "-cf");
+            if (connectionFile.Length > 0)
+                connection = File.ReadAllText(connectionFile);
+
             LoadCommand(args);
 
             var entry = Database.Entries[0];
