@@ -261,7 +261,7 @@ namespace WDBXEditor.ConsoleHandler
         public static void SqlLoadArgCommand(string[] args)
         {
             var pmap = ConsoleManager.ParseCommand(args);
-            string connection = ParamCheck<string>(pmap, "-c");
+            string connection = ParamCheck<string>(pmap, "-c", false);
             UpdateMode mode = ParamCheck<UpdateMode>(pmap, "-m");
 
             string connectionFile = ParamCheck<string>(pmap, "-cf");
