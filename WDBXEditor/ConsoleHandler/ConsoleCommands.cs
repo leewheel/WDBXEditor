@@ -398,16 +398,10 @@ namespace WDBXEditor.ConsoleHandler
             var pmap = ConsoleManager.ParseCommand(args);
 
             string connection = ParamCheck<string>(pmap, "-c");
-            if (connection == "config")
-            {
-                var host = Properties.Settings.Default["Host"].ToString();
-                var port = Properties.Settings.Default["Port"].ToString();
-                var database = Properties.Settings.Default["Database"].ToString();
-                var user = Properties.Settings.Default["User"].ToString();
-                var password = Properties.Settings.Default["Password"].ToString();
 
-                connection = $"Server={host}:{port};Database={database};Uid={user};Pwd={password};";
-            }
+            string connection_file = ParamCheck<string>(pmap, "-cf");
+            if (connection_file.Length > 0)
+                connection = File.ReadAllText(connection_file);
 
             UpdateMode mode = ParamCheck<UpdateMode>(pmap, "-m");
 
