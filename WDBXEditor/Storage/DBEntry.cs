@@ -777,11 +777,22 @@ namespace WDBXEditor.Storage
 			return true;
 		}
 
-		public bool ImportSQL(UpdateMode mode, string connectionstring, string table, out string error, string columns = "*")
+		public bool ImportSQL(UpdateMode mode, string connectionstring, string table, out string error, string columns = "")
 		{
 			error = string.Empty;
 			DataTable importTable = Data.Clone(); //Clone table structure to help with mapping
 			Parallel.For(0, importTable.Columns.Count, c => importTable.Columns[c].AllowDBNull = true); //Allow null values
+
+			if (columns.Length == 0)
+            {
+				Func<string, string> EncodeSql = s => { return string.Concat("`", s.Replace(Environment.NewLine, string.Empty).Replace("\"", "\"\""), "`"); };
+
+				StringBuilder sb = new StringBuilder();
+				IEnumerable<string> columnNames = Data.Columns.Cast<DataColumn>().Select(column => EncodeSql(column.ColumnName));
+				sb.AppendLine(string.Join(",", columnNames));
+
+				columns = sb.ToString();
+			}
 
 			using (MySqlConnection connection = new MySqlConnection(connectionstring))
 			using (MySqlCommand command = new MySqlCommand($"SELECT {columns} FROM `{table}`", connection))
