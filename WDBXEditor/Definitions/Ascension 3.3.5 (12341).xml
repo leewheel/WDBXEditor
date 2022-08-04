@@ -1233,8 +1233,8 @@
   <Table Name="LfgDungeonGroup" Build="12341">
     <Field Name="ID" Type="int" IsIndex="true" />
     <Field Name="Name_Lang" Type="loc" />
-    <Field Name="Order_Index" Type="int" />
-    <Field Name="Parent_Group_Id" Type="int" />
+    <Field Name="OrderIndex" Type="int" />
+    <Field Name="ParentGroupId" Type="int" />
     <Field Name="Typeid" Type="int" />
   </Table>
   <Table Name="LfgDungeons" Build="12341">
