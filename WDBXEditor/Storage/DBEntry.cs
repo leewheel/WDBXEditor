@@ -483,7 +483,12 @@ namespace WDBXEditor.Storage
 		/// <returns></returns>
 		public string ToSQL()
 		{
-			string tableName = $"db_{TableStructure.Name}_{Build}";
+			// @robinsch: ascension build is in fact WotLK
+			var buildNumber = Build;
+			if (buildNumber == (int)WDBXEditor.Common.Constants.ExpansionFinalBuild.Ascension)
+				buildNumber = (int)WDBXEditor.Common.Constants.ExpansionFinalBuild.WotLK;
+
+			string tableName = $"db_{TableStructure.Name}_{buildNumber}";
 
 			StringBuilder sb = new StringBuilder();
 			sb.AppendLine($"DROP TABLE IF EXISTS `{tableName}`; ");
@@ -500,7 +505,12 @@ namespace WDBXEditor.Storage
 		/// <param name="connectionstring"></param>
 		public void ToSQLTable(string connectionstring)
 		{
-			string tableName = $"db_{TableStructure.Name}_{Build}";
+			// @robinsch: ascension build is in fact WotLK
+			var buildNumber = Build;
+			if (buildNumber == (int)WDBXEditor.Common.Constants.ExpansionFinalBuild.Ascension)
+				buildNumber = (int)WDBXEditor.Common.Constants.ExpansionFinalBuild.WotLK;
+
+			string tableName = $"db_{TableStructure.Name}_{buildNumber}";
 			string csvName = Path.Combine(TEMP_FOLDER, tableName + ".csv");
 			StringBuilder sb = new StringBuilder();
 			sb.AppendLine("SET SESSION sql_mode = 'NO_ENGINE_SUBSTITUTION';");

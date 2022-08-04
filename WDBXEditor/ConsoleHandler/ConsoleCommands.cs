@@ -409,8 +409,13 @@ namespace WDBXEditor.ConsoleHandler
 
             var entry = Database.Entries[0];
 
+            // @robinsch: ascension build is in fact WotLK
+            var buildNumber = entry.Build;
+            if (buildNumber == (int)WDBXEditor.Common.Constants.ExpansionFinalBuild.Ascension)
+                buildNumber = (int)WDBXEditor.Common.Constants.ExpansionFinalBuild.WotLK;
+
             // @robinsch: if we have ascension definitions loaded we try to select server side dbc tables
-            var table = $"db_{entry.TableStructure.Name.ToLower()}_{entry.Build}";
+            var table = $"db_{entry.TableStructure.Name.ToLower()}_{buildNumber}";
             if (entry.Build == ((int)WDBXEditor.Common.Constants.ExpansionFinalBuild.Ascension) && AscensionDBCTables.ContainsKey(entry.TableStructure.Name))
                 table = AscensionDBCTables[entry.TableStructure.Name];
 
