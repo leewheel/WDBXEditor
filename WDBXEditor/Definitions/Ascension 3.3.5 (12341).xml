@@ -1994,7 +1994,7 @@
   <Table Name="Spell" Build="12341">
     <Field Name="ID" Type="int" IsIndex="true" />
     <Field Name="Category" Type="uint" />
-    <Field Name="DispelType" Type="uint" />
+    <Field Name="Dispel" Type="uint" />
     <Field Name="Mechanic" Type="uint" />
     <Field Name="Attributes" Type="uint" />
     <Field Name="AttributesEx" Type="uint" />
