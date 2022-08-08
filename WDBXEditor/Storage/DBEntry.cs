@@ -103,6 +103,23 @@ namespace WDBXEditor.Storage
 					{
 						if (columnsNames.Length >= (i + 1) && !string.IsNullOrWhiteSpace(columnsNames[i]))
 							columnName = columnsNames[i];
+						else if (Build == (int)ExpansionFinalBuild.Ascension && TableStructure.Name == "Spell")
+                        {
+							if (columnName == "SpellName" || columnName == "SpellNameFlag" ||
+								columnName == "SpellRank" || columnName == "SpellRankFlags" ||
+								columnName == "SpellDescription" || columnName == "SpellDescriptionFlags" ||
+								columnName == "SpellToolTip" || columnName == "SpellToolTipFlags")
+							{
+								columnName += i;
+							}
+							else if (columnName == "SpellFamilyFlags")
+                            {
+								if (i > 0)
+									columnName += i;
+							}
+							else
+								columnName += (i + 1);
+						}
 						else
 							columnName += "_" + (i + 1);
 					}

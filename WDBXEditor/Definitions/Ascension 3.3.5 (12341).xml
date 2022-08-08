@@ -2044,8 +2044,8 @@
     <Field Name="Reagent" Type="int" ArraySize="8" />
     <Field Name="ReagentCount" Type="int" ArraySize="8" />
     <Field Name="EquippedItemClass" Type="int" />
-    <Field Name="EquippedItemSubclassMask" Type="int" />
-    <Field Name="EquippedItemInvTypesMask" Type="int" />
+    <Field Name="EquippedItemSubClassMask" Type="int" />
+    <Field Name="EquippedItemInventoryTypeMask" Type="int" />
     <Field Name="Effect" Type="uint" ArraySize="3" />
     <Field Name="EffectDieSides" Type="int" ArraySize="3" />
     <Field Name="EffectRealPointsPerLevel" Type="float" ArraySize="3" />
@@ -2057,7 +2057,7 @@
     <Field Name="EffectApplyAuraName" Type="uint" ArraySize="3" />
     <Field Name="EffectAmplitude" Type="uint" ArraySize="3" />
     <Field Name="EffectMultipleValue" Type="float" ArraySize="3" />
-    <Field Name="EffectChainTargets" Type="uint" ArraySize="3" />
+    <Field Name="EffectChainTarget" Type="uint" ArraySize="3" />
     <Field Name="EffectItemType" Type="uint" ArraySize="3" />
     <Field Name="EffectMiscValue" Type="int" ArraySize="3" />
     <Field Name="EffectMiscValueB" Type="int" ArraySize="3" />
@@ -2070,10 +2070,14 @@
     <Field Name="SpellIconID" Type="uint" />
     <Field Name="ActiveIconID" Type="uint" />
     <Field Name="SpellPriority" Type="uint" />
-    <Field Name="SpellName" Type="loc" />
-    <Field Name="SpellRank" Type="loc" />
-    <Field Name="SpellDescription" Type="loc" />
-    <Field Name="SpellToolTip" Type="loc" />
+    <Field Name="SpellName" Type="string" ArraySize="9" />
+    <Field Name="SpellNameFlag" Type="int" ArraySize="8" />
+    <Field Name="SpellRank" Type="string" ArraySize="9" />
+    <Field Name="SpellRankFlags" Type="int" ArraySize="8" />
+    <Field Name="SpellDescription" Type="string" ArraySize="9" />
+    <Field Name="SpellDescriptionFlags" Type="int" ArraySize="8" />
+    <Field Name="SpellToolTip" Type="string" ArraySize="9" />
+    <Field Name="SpellToolTipFlags" Type="int" ArraySize="8" />
     <Field Name="ManaCostPercentage" Type="uint" />
     <Field Name="StartRecoveryCategory" Type="uint" />
     <Field Name="StartRecoveryTime" Type="uint" />
