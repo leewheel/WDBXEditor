@@ -1776,7 +1776,7 @@
     <Field Name="Charlevel" Type="int" />
     <Field Name="ShoulderBudget" Type="int" />
     <Field Name="TrinketBudget" Type="int" />
-    <Field Name="WeaponBudget1H" Type="int" />
+    <Field Name="WeaponBudget" Type="int" />
     <Field Name="RangedBudget" Type="int" />
     <Field Name="ClothShoulderArmor" Type="int" />
     <Field Name="LeatherShoulderArmor" Type="int" />
