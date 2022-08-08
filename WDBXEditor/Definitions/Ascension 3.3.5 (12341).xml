@@ -2042,7 +2042,7 @@
     <Field Name="StackAmount" Type="uint" />
     <Field Name="Totem" Type="uint" ArraySize="2" />
     <Field Name="Reagent" Type="int" ArraySize="8" />
-    <Field Name="ReagentCount" Type="int" ArraySize="8" />
+    <Field Name="ReagentCount" Type="uint" ArraySize="8" />
     <Field Name="EquippedItemClass" Type="int" />
     <Field Name="EquippedItemSubClassMask" Type="int" />
     <Field Name="EquippedItemInventoryTypeMask" Type="int" />
@@ -2093,11 +2093,11 @@
     <Field Name="MinimumReputation" Type="uint" />
     <Field Name="RequiredAuraVision" Type="uint" />
     <Field Name="TotemCategory" Type="uint" ArraySize="2" />
-    <Field Name="AreaGroupID" Type="int" />
+    <Field Name="AreaGroupID" Type="uint" />
     <Field Name="SchoolMask" Type="uint" />
     <Field Name="RuneCostID" Type="uint" />
     <Field Name="SpellMissileID" Type="uint" />
-    <Field Name="PowerDisplayId" Type="int" />
+    <Field Name="PowerDisplayId" Type="uint" />
     <Field Name="EffectBonusMultiplier1" Type="float" />
     <Field Name="EffectBonusMultiplier2" Type="float" />
     <Field Name="EffectBonusMultiplier3" Type="float" />
