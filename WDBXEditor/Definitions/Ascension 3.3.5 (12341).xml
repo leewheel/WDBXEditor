@@ -2031,7 +2031,7 @@
     <Field Name="BaseLevel" Type="uint" />
     <Field Name="SpellLevel" Type="uint" />
     <Field Name="DurationIndex" Type="uint" />
-    <Field Name="PowerType" Type="int" />
+    <Field Name="PowerType" Type="uint" />
     <Field Name="ManaCost" Type="uint" />
     <Field Name="ManaCostPerLevel" Type="uint" />
     <Field Name="ManaPerSecond" Type="uint" />
