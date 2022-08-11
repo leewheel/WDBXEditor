@@ -100,7 +100,7 @@ namespace WDBXEditor.ConsoleHandler
             { "SoundProviderPreferences", "dbc_sound_provider_preferences" },
             { "SoundSamplePreferences", "dbc_sound_sample_preferences" },
             { "SoundWaterType", "dbc_sound_water_type" },
-            { "Spell", "spell_player_patch" },
+            { "Spell", "spell_player_patch_wdbx" },
             { "SpellCastTimes", "dbc_spell_cast_times" },
             { "SpellCategory", "dbc_spell_category" },
             { "SpellChainEffects", "dbc_spell_chain_effects" },

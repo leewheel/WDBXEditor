@@ -105,7 +105,7 @@ namespace WDBXEditor
             { "SoundProviderPreferences", "dbc_sound_provider_preferences" },
             { "SoundSamplePreferences", "dbc_sound_sample_preferences" },
             { "SoundWaterType", "dbc_sound_water_type" },
-            { "Spell", "spell_player_patch" },
+            { "Spell", "spell_player_patch_wdbx" },
             { "SpellCastTimes", "dbc_spell_cast_times" },
             { "SpellCategory", "dbc_spell_category" },
             { "SpellChainEffects", "dbc_spell_chain_effects" },
@@ -265,7 +265,7 @@ namespace WDBXEditor
                         else if (radOverride.Checked)
                             mode = UpdateMode.Replace;
 
-                        if (Entry.ImportSQL(mode, constring, table, out ErrorMessage))
+                        if (Entry.ImportSQL(mode, constring, table, out ErrorMessage, "*"))
                             return DialogResult.OK;
                         else
                             return DialogResult.Abort;

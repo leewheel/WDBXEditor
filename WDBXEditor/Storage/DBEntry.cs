@@ -103,23 +103,7 @@ namespace WDBXEditor.Storage
 					{
 						if (columnsNames.Length >= (i + 1) && !string.IsNullOrWhiteSpace(columnsNames[i]))
 							columnName = columnsNames[i];
-						else if (Build == (int)ExpansionFinalBuild.Ascension && TableStructure.Name == "Spell")
-                        {
-							if (columnName == "SpellName" || columnName == "SpellNameFlag" ||
-								columnName == "SpellRank" || columnName == "SpellRankFlags" ||
-								columnName == "SpellDescription" || columnName == "SpellDescriptionFlags" ||
-								columnName == "SpellToolTip" || columnName == "SpellToolTipFlags")
-							{
-								columnName += i;
-							}
-							else if (columnName == "SpellFamilyFlags")
-                            {
-								if (i > 0)
-									columnName += i;
-							}
-							else
-								columnName += (i + 1);
-						}
+
 						else
 							columnName += "_" + (i + 1);
 					}
@@ -827,17 +811,17 @@ namespace WDBXEditor.Storage
 			{
 				try
 				{
-					// @robinsch: ascension needs to run spell player patch query before importing
-					if (table == "spell_player_patch")
+                    // @robinsch: ascension needs to run spell player patch query before importing
+                    if (table == "spell_player_patch_wdbx")
                     {
-						MySqlCommand cmd = new MySqlCommand("UpdateSpellPlayerPatch", connection);
-						cmd.CommandType = CommandType.StoredProcedure;
-						cmd.Connection.Open();
-						cmd.ExecuteNonQuery();
-						cmd.Connection.Close();
-					}
+                        MySqlCommand cmd = new MySqlCommand("UpdateSpellPlayerPatchWDBX", connection);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Connection.Open();
+                        cmd.ExecuteNonQuery();
+                        cmd.Connection.Close();
+                    }
 
-					adapter.FillSchema(importTable, SchemaType.Source); //Enforce schema
+                    adapter.FillSchema(importTable, SchemaType.Source); //Enforce schema
 					adapter.Fill(importTable);
 				}
 				catch (ConstraintException ex)
