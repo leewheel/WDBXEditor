@@ -815,11 +815,12 @@ namespace WDBXEditor.Storage
                     if (table == "spell_player_patch_wdbx")
                     {
                         MySqlCommand cmd = new MySqlCommand("UpdateSpellPlayerPatchWDBX", connection);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Connection.Open();
-                        cmd.ExecuteNonQuery();
-                        cmd.Connection.Close();
-                    }
+						cmd.CommandType = CommandType.StoredProcedure;
+						cmd.CommandTimeout = 200;
+						cmd.Connection.Open();
+						cmd.ExecuteNonQuery();
+						cmd.Connection.Close();
+					}
 
                     adapter.FillSchema(importTable, SchemaType.Source); //Enforce schema
 					adapter.Fill(importTable);
@@ -839,12 +840,10 @@ namespace WDBXEditor.Storage
 
 			//Replace DBNulls with default value
 			var defaultVals = importTable.Columns.Cast<DataColumn>().Select(x => x.DefaultValue).ToArray();
-			Parallel.For(0, importTable.Rows.Count, r =>
-			{
+			for (int r = 0; r < importTable.Rows.Count; r++)
 				for (int i = 0; i < importTable.Columns.Count; i++)
 					if (importTable.Rows[r][i] == DBNull.Value)
 						importTable.Rows[r][i] = defaultVals[i];
-			});
 
 			switch (Data.ShallowCompare(importTable))
 			{
