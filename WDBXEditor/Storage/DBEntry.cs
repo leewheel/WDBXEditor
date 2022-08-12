@@ -800,6 +800,7 @@ namespace WDBXEditor.Storage
 				catch (Exception ex)
 				{
 					System.Diagnostics.Debug.WriteLine(ex.Message);
+					error = "Import Failed:\n" + ex.Message;
 					return false;
 				}
 			}
