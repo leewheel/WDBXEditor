@@ -2591,7 +2591,7 @@
     <Field Name="VehicleRideAnimLoop" Type="int" />
     <Field Name="VehicleEnterAnimBone" Type="int" />
     <Field Name="VehicleExitAnimBone" Type="int" />
-    <Field Name="VehicleRideAnimLoopBone" Type="int" />
+    <Field Name="VehicleRideAnimBone" Type="int" />
     <Field Name="VehicleEnterAnimDelay" Type="float" />
     <Field Name="VehicleExitAnimDelay" Type="float" />
     <Field Name="VehicleAbilityDisplay" Type="int" />
