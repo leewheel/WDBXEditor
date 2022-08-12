@@ -304,6 +304,12 @@
     <Field Name="Name1_Lang" Type="loc" />
     <Field Name="Mask_ID" Type="int" />
   </Table>
+  <Table Name="CharVariations" Build="12341">
+    <Field Name="ID" Type="int" IsIndex="true" AutoGenerate="true" />
+    <Field Name="RaceID" Type="int" />
+    <Field Name="ClassID" Type="int" />
+    <Field Name="TextureHoldLayer" Type="int" ArraySize="4" />
+  </Table>
   <Table Name="ChatChannels" Build="12341">
     <Field Name="ID" Type="int" IsIndex="true" />
     <Field Name="Flags" Type="int" />
