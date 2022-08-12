@@ -806,12 +806,10 @@ namespace WDBXEditor.Storage
 
 			//Replace DBNulls with default value
 			var defaultVals = importTable.Columns.Cast<DataColumn>().Select(x => x.DefaultValue).ToArray();
-			Parallel.For(0, importTable.Rows.Count, r =>
-			{
+			for (int r = 0; r < importTable.Rows.Count; r++)
 				for (int i = 0; i < importTable.Columns.Count; i++)
 					if (importTable.Rows[r][i] == DBNull.Value)
 						importTable.Rows[r][i] = defaultVals[i];
-			});
 
 			switch (Data.ShallowCompare(importTable))
 			{
