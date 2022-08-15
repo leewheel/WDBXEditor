@@ -790,6 +790,10 @@ namespace WDBXEditor.Storage
 
 		public bool ImportSQL(UpdateMode mode, string connectionstring, string table, out string error, string columns = "")
 		{
+			// HACK! If the table is dbc_spell_item_enchantment, override fields
+			if (table == "dbc_spell_item_enchantment")
+				columns = "ID, Charges, Effect_1, Effect_2, Effect_3, EffectPointsMin_1, EffectPointsMin_2, EffectPointsMin_3, EffectPointsMax_1, EffectPointsMax_2, EffectPointsMax_3, EffectArg_1, EffectArg_2, EffectArg_3, Name_Lang_enUS, Name_Lang_enGB, Name_Lang_koKR, Name_Lang_frFR, Name_Lang_deDE, Name_Lang_enCN, Name_Lang_zhCN, Name_Lang_enTW, Name_Lang_zhTW, Name_Lang_esES, Name_Lang_esMX, Name_Lang_ruRU, Name_Lang_ptPT, Name_Lang_ptBR, Name_Lang_itIT, Name_Lang_Unk, Name_Lang_Mask, ItemVisual, Flags, Src_ItemID, Condition_Id, RequiredSkillID, RequiredSkillRank, MinLevel";
+
 			error = string.Empty;
 			DataTable importTable = Data.Clone(); //Clone table structure to help with mapping
 			Parallel.For(0, importTable.Columns.Count, c => importTable.Columns[c].AllowDBNull = true); //Allow null values
