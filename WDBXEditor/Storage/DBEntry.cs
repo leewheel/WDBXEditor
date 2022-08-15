@@ -517,20 +517,28 @@ namespace WDBXEditor.Storage
 				using (MySqlCommand command = new MySqlCommand(sb.ToString(), connection))
 					command.ExecuteNonQuery();
 
-				new MySqlBulkLoader(connection)
+                try
+                {
+					new MySqlBulkLoader(connection)
+					{
+						TableName = $"`{tableName}`",
+						FieldTerminator = ",",
+						LineTerminator = "\r\n",
+						NumberOfLinesToSkip = 1,
+						FileName = csvName,
+						FieldQuotationCharacter = '"',
+						CharacterSet = "UTF8"
+					}.Load();
+				}
+				catch (Exception ex)
 				{
-					TableName = $"`{tableName}`",
-					FieldTerminator = ",",
-					LineTerminator = "\r\n",
-					NumberOfLinesToSkip = 1,
-					FileName = csvName,
-					FieldQuotationCharacter = '"',
-					CharacterSet = "UTF8"
-				}.Load();
+					MessageBox.Show(ex.Message);
+					throw;
+				}
 			}
 
 			try { File.Delete(csvName); }
-			catch { }
+			catch (Exception ex) { }
 		}
 
 		/// <summary>
