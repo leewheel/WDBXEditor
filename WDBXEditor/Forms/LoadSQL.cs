@@ -265,7 +265,7 @@ namespace WDBXEditor
                         else if (radOverride.Checked)
                             mode = UpdateMode.Replace;
 
-                        if (Entry.ImportSQL(mode, constring, table, out ErrorMessage, "*"))
+                        if (Entry.ImportSQL(mode, constring, table, out ErrorMessage))
                             return DialogResult.OK;
                         else
                             return DialogResult.Abort;
