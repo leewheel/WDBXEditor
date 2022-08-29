@@ -2154,7 +2154,7 @@
     <Field Name="Red" Type="byte" />
     <Field Name="Green" Type="byte" />
     <Field Name="Blue" Type="byte" />
-    <Field Name="BlendMode" Type="byte" />
+    <Field Name="BlendMode" Type="int" />
     <Field Name="Combo" Type="string" />
     <Field Name="RenderLayer" Type="int" />
     <Field Name="TextureLength" Type="float" />
