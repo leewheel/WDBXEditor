@@ -397,11 +397,7 @@ namespace WDBXEditor.ConsoleHandler
         {
             var pmap = ConsoleManager.ParseCommand(args);
 
-            string connection = ParamCheck<string>(pmap, "-c", false);
-
-            string connection_file = ParamCheck<string>(pmap, "-cf");
-            if (connection_file.Length > 0)
-                connection = File.ReadAllText(connection_file);
+            string connection = ParamCheck<string>(pmap, "-c");
 
             UpdateMode mode = ParamCheck<UpdateMode>(pmap, "-m");
 
