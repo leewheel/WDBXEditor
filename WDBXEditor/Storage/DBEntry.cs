@@ -487,7 +487,7 @@ namespace WDBXEditor.Storage
 
 			StringBuilder sb = new StringBuilder();
 			sb.AppendLine($"DROP TABLE IF EXISTS `{tableName}`; ");
-			sb.AppendLine($"CREATE TABLE `{tableName}` ({Data.Columns.ToSql(Key)}) ENGINE=MyISAM DEFAULT CHARSET=utf8; ");
+			sb.AppendLine($"CREATE TABLE `{tableName}` ({Data.Columns.ToSql(Key)}) ENGINE=InnoDB DEFAULT CHARSET=utf8; ");
 			foreach (DataRow row in Data.Rows)
 				sb.AppendLine($"INSERT INTO `{tableName}` VALUES ({ row.ToSql() }); ");
 
@@ -505,7 +505,7 @@ namespace WDBXEditor.Storage
 			StringBuilder sb = new StringBuilder();
 			sb.AppendLine("SET SESSION sql_mode = 'NO_ENGINE_SUBSTITUTION';");
 			sb.AppendLine($"DROP TABLE IF EXISTS `{tableName}`; ");
-			sb.AppendLine($"CREATE TABLE `{tableName}` ({Data.Columns.ToSql(Key)}) ENGINE=MyISAM DEFAULT CHARACTER SET = utf8 COLLATE = utf8_unicode_ci; ");
+			sb.AppendLine($"CREATE TABLE `{tableName}` ({Data.Columns.ToSql(Key)}) ENGINE=InnoDB DEFAULT CHARACTER SET = utf8 COLLATE = utf8_unicode_ci; ");
 
 			using (StreamWriter csv = new StreamWriter(csvName))
 				csv.Write(ToCSV());
