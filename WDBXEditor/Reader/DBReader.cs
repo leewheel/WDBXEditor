@@ -11,9 +11,20 @@ using WDBXEditor.Common;
 using static WDBXEditor.Common.Constants;
 using System.Diagnostics;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.RegularExpressions;
 
 namespace WDBXEditor.Reader
 {
+    [Serializable]
+    public class DuplicatePrimaryKeyException : Exception
+	{
+        public DuplicatePrimaryKeyException() : base() { }
+        public DuplicatePrimaryKeyException(string message, uint primaryKey) : base(message) { PrimaryKey = primaryKey; }
+        public DuplicatePrimaryKeyException(string message, uint primaryKey, Exception inner) : base(message, inner) { PrimaryKey = primaryKey; }
+
+        public uint PrimaryKey;
+    }
+	
 	public class DBReader
 	{
 		public string ErrorMessage { get; set; }
@@ -304,7 +315,20 @@ namespace WDBXEditor.Reader
 			}
 
 			entry.Header.Clear();
-			entry.Data.EndLoadData();
+
+            try
+            {
+                entry.Data.EndLoadData();
+            }
+            catch (ConstraintException ex)
+            {
+                var primaryKey = new string(entry.Data.GetErrors()[0].RowError.SkipWhile(c => !char.IsDigit(c))
+                                         .TakeWhile(c => char.IsDigit(c))
+                                         .ToArray());
+
+                throw new DuplicatePrimaryKeyException(ex.Message, uint.Parse(primaryKey));
+            }
+    
 		}
 		#endregion
 
