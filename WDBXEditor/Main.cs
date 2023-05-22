@@ -1054,7 +1054,7 @@ namespace WDBXEditor
 					UpdateListBox();
 
 					if (x.IsFaulted)
-						MessageBox.Show($"Error exporting to file {x.Exception.Message}");
+						MessageBox.Show($"Error exporting to file {x.Exception.InnerException.Message}");
 
 				}, TaskScheduler.FromCurrentSynchronizationContext());
 			}
