@@ -2818,4 +2818,14 @@
     <Field Name="SilenceintervalMax" Type="int" ArraySize="2" />
     <Field Name="Sounds" Type="int" ArraySize="2" />
   </Table>
+  <Table Name="ItemDisplayInfoCollections" Build="12341">
+    <Field Name="ID" Type="int" IsIndex="true" />
+    <Field Name="DisplayID" Type="int" />
+    <Field Name="AttachmentPoint" Type="int" />
+    <Field Name="AttachmentPointHD" Type="int" />
+    <Field Name="ModelName" Type="string" />
+    <Field Name="ModelTexture" Type="string" />
+    <Field Name="Scale" Type="float" />
+    <Field Name="ScaleHD" Type="float" />
+  </Table>
 </Definition>
