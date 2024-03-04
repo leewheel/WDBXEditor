@@ -2828,4 +2828,12 @@
     <Field Name="Scale" Type="float" />
     <Field Name="ScaleHD" Type="float" />
   </Table>
+  <Table Name="ZoneStory" Build="12341">
+    <Field Name="ID" Type="int" IsIndex="true" />
+    <Field Name="DisplayAchievementID" Type="int" />
+    <Field Name="TextCoordsX1" Type="float" />
+    <Field Name="TextCoordsX2" Type="float" />
+    <Field Name="TextCoordsY1" Type="float" />
+    <Field Name="TextCoordsY2" Type="float" />
+  </Table>
 </Definition>
