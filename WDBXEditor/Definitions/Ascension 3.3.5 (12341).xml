@@ -2842,4 +2842,17 @@
       <Field Name="StringValue" Type="string" />
       <Field Name="Flags" Type="int" />
   </Table>
+  <Table Name="ZoneLight" Build="12341">
+      <Field Name="ID" Type="int" IsIndex="true" />
+      <Field Name="Name" Type="string" />
+      <Field Name="MapID" Type="int" />
+      <Field Name="LightID" Type="int" />
+  </Table>
+  <Table Name="ZoneLightPoint" Build="12341">
+      <Field Name="ID" Type="int" IsIndex="true" />
+      <Field Name="ZoneLightID" Type="int" />
+      <Field Name="PositionX" Type="float" />
+      <Field Name="PositionY" Type="float" />
+      <Field Name="PointOrder" Type="int" />
+   </Table>
 </Definition>
