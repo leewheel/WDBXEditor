@@ -2836,4 +2836,10 @@
     <Field Name="TextCoordsY1" Type="float" />
     <Field Name="TextCoordsY2" Type="float" />
   </Table>
+  <Table Name="GlueStrings" Build="12341">
+      <Field Name="ID" Type="int" IsIndex="true" />
+      <Field Name="StringName" Type="string" />
+      <Field Name="StringValue" Type="string" />
+      <Field Name="Flags" Type="int" />
+  </Table>
 </Definition>
