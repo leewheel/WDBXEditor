@@ -2106,6 +2106,19 @@
     <Field Name="SpellDescriptionVariableID" Type="uint" />
     <Field Name="SpellDifficultyID" Type="uint" />
   </Table>
+  <Table Name="SpellCustomAttr" Build="12341">
+    <Field Name="ID" Type="int" IsIndex="true" />
+    <Field Name="Entry" Type="int" />
+	<Field Name="Attributes" Type="int" />
+	<Field Name="AttributesEx" Type="int" />
+	<Field Name="AttributesEx2" Type="int" />
+	<Field Name="AttributesEx3" Type="int" />
+	<Field Name="AttributesEx4" Type="int" />
+	<Field Name="AttributesEx5" Type="int" />
+	<Field Name="InterruptFlags" Type="int" />
+	<Field Name="AuraInterruptFlags" Type="int" />
+	<Field Name="ChannelInterruptFlags" Type="int" />
+  </Table>
   <Table Name="SpellCastTimes" Build="12341">
     <Field Name="ID" Type="int" IsIndex="true" />
     <Field Name="Base" Type="int" />
