@@ -37,17 +37,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 9);
+            this.label3.Location = new System.Drawing.Point(18, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 13);
+            this.label3.Size = new System.Drawing.Size(418, 24);
             this.label3.TabIndex = 17;
             this.label3.Text = "Select which hotfix entry to read:";
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(116, 233);
+            this.btnLoad.Location = new System.Drawing.Point(232, 430);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.Size = new System.Drawing.Size(150, 42);
             this.btnLoad.TabIndex = 15;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(197, 233);
+            this.btnClose.Location = new System.Drawing.Point(394, 430);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -66,24 +69,27 @@
             // lbDefinitions
             // 
             this.lbDefinitions.FormattingEnabled = true;
-            this.lbDefinitions.Location = new System.Drawing.Point(12, 28);
+            this.lbDefinitions.ItemHeight = 24;
+            this.lbDefinitions.Location = new System.Drawing.Point(24, 52);
+            this.lbDefinitions.Margin = new System.Windows.Forms.Padding(6);
             this.lbDefinitions.Name = "lbDefinitions";
-            this.lbDefinitions.Size = new System.Drawing.Size(260, 199);
+            this.lbDefinitions.Size = new System.Drawing.Size(516, 364);
             this.lbDefinitions.TabIndex = 14;
             // 
             // LoadHotfix
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(548, 479);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lbDefinitions);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 300);
+            this.MaximumSize = new System.Drawing.Size(574, 550);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.MinimumSize = new System.Drawing.Size(574, 550);
             this.Name = "LoadHotfix";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

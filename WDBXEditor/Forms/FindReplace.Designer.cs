@@ -45,44 +45,49 @@
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(90, 12);
+            this.txtFind.Location = new System.Drawing.Point(180, 22);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(204, 20);
+            this.txtFind.Size = new System.Drawing.Size(404, 35);
             this.txtFind.TabIndex = 0;
             this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(24, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(130, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Find what:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Location = new System.Drawing.Point(24, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.Size = new System.Drawing.Size(166, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Replace with:";
             // 
             // txtReplace
             // 
             this.txtReplace.Enabled = false;
-            this.txtReplace.Location = new System.Drawing.Point(90, 38);
+            this.txtReplace.Location = new System.Drawing.Point(180, 70);
+            this.txtReplace.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtReplace.Name = "txtReplace";
-            this.txtReplace.Size = new System.Drawing.Size(204, 20);
+            this.txtReplace.Size = new System.Drawing.Size(404, 35);
             this.txtReplace.TabIndex = 1;
             // 
             // btnFind
             // 
             this.btnFind.Enabled = false;
-            this.btnFind.Location = new System.Drawing.Point(300, 10);
+            this.btnFind.Location = new System.Drawing.Point(638, 19);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 23);
+            this.btnFind.Size = new System.Drawing.Size(150, 42);
             this.btnFind.TabIndex = 2;
             this.btnFind.Text = "Find Next";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // btnReplace
             // 
             this.btnReplace.Enabled = false;
-            this.btnReplace.Location = new System.Drawing.Point(300, 39);
+            this.btnReplace.Location = new System.Drawing.Point(638, 73);
+            this.btnReplace.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnReplace.Name = "btnReplace";
-            this.btnReplace.Size = new System.Drawing.Size(75, 23);
+            this.btnReplace.Size = new System.Drawing.Size(150, 42);
             this.btnReplace.TabIndex = 3;
             this.btnReplace.Text = "Replace";
             this.btnReplace.UseVisualStyleBackColor = true;
@@ -102,9 +108,10 @@
             // btnReplaceAll
             // 
             this.btnReplaceAll.Enabled = false;
-            this.btnReplaceAll.Location = new System.Drawing.Point(300, 68);
+            this.btnReplaceAll.Location = new System.Drawing.Point(638, 127);
+            this.btnReplaceAll.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnReplaceAll.Name = "btnReplaceAll";
-            this.btnReplaceAll.Size = new System.Drawing.Size(75, 23);
+            this.btnReplaceAll.Size = new System.Drawing.Size(150, 42);
             this.btnReplaceAll.TabIndex = 4;
             this.btnReplaceAll.Text = "Replace All";
             this.btnReplaceAll.UseVisualStyleBackColor = true;
@@ -112,9 +119,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(300, 97);
+            this.btnCancel.Location = new System.Drawing.Point(638, 180);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(150, 42);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -123,9 +131,10 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(12, 114);
+            this.lblResult.Location = new System.Drawing.Point(24, 210);
+            this.lblResult.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(19, 13);
+            this.lblResult.Size = new System.Drawing.Size(58, 24);
             this.lblResult.TabIndex = 6;
             this.lblResult.Text = "....";
             this.lblResult.Visible = false;
@@ -133,9 +142,10 @@
             // chkCase
             // 
             this.chkCase.AutoSize = true;
-            this.chkCase.Location = new System.Drawing.Point(137, 64);
+            this.chkCase.Location = new System.Drawing.Point(274, 118);
+            this.chkCase.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.chkCase.Name = "chkCase";
-            this.chkCase.Size = new System.Drawing.Size(83, 17);
+            this.chkCase.Size = new System.Drawing.Size(162, 28);
             this.chkCase.TabIndex = 7;
             this.chkCase.Text = "Match Case";
             this.chkCase.UseVisualStyleBackColor = true;
@@ -144,9 +154,10 @@
             // chkExact
             // 
             this.chkExact.AutoSize = true;
-            this.chkExact.Location = new System.Drawing.Point(137, 87);
+            this.chkExact.Location = new System.Drawing.Point(274, 161);
+            this.chkExact.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.chkExact.Name = "chkExact";
-            this.chkExact.Size = new System.Drawing.Size(151, 17);
+            this.chkExact.Size = new System.Drawing.Size(354, 28);
             this.chkExact.TabIndex = 8;
             this.chkExact.Text = "Match Entire Cell Contents";
             this.chkExact.UseVisualStyleBackColor = true;
@@ -155,9 +166,10 @@
             // 
             this.rdoText.AutoSize = true;
             this.rdoText.Checked = true;
-            this.rdoText.Location = new System.Drawing.Point(137, 110);
+            this.rdoText.Location = new System.Drawing.Point(274, 203);
+            this.rdoText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdoText.Name = "rdoText";
-            this.rdoText.Size = new System.Drawing.Size(76, 17);
+            this.rdoText.Size = new System.Drawing.Size(149, 28);
             this.rdoText.TabIndex = 10;
             this.rdoText.TabStop = true;
             this.rdoText.Text = "Text Mode";
@@ -166,9 +178,10 @@
             // rdoFlag
             // 
             this.rdoFlag.AutoSize = true;
-            this.rdoFlag.Location = new System.Drawing.Point(219, 110);
+            this.rdoFlag.Location = new System.Drawing.Point(438, 203);
+            this.rdoFlag.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdoFlag.Name = "rdoFlag";
-            this.rdoFlag.Size = new System.Drawing.Size(75, 17);
+            this.rdoFlag.Size = new System.Drawing.Size(149, 28);
             this.rdoFlag.TabIndex = 11;
             this.rdoFlag.Text = "Flag Mode";
             this.rdoFlag.UseVisualStyleBackColor = true;
@@ -176,9 +189,9 @@
             // FindReplace
             // 
             this.AcceptButton = this.btnFind;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 137);
+            this.ClientSize = new System.Drawing.Size(832, 276);
             this.Controls.Add(this.rdoText);
             this.Controls.Add(this.rdoFlag);
             this.Controls.Add(this.chkExact);
@@ -192,9 +205,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFind);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(400, 168);
+            this.MinimumSize = new System.Drawing.Size(774, 250);
             this.Name = "FindReplace";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

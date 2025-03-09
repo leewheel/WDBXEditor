@@ -49,20 +49,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.txtText);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(524, 329);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.panel1.Size = new System.Drawing.Size(1048, 633);
             this.panel1.TabIndex = 0;
             // 
             // txtText
             // 
             this.txtText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtText.Location = new System.Drawing.Point(5, 5);
+            this.txtText.Location = new System.Drawing.Point(10, 9);
+            this.txtText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtText.Multiline = true;
             this.txtText.Name = "txtText";
             this.txtText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtText.Size = new System.Drawing.Size(514, 319);
+            this.txtText.Size = new System.Drawing.Size(1028, 615);
             this.txtText.TabIndex = 0;
             this.txtText.Enter += new System.EventHandler(this.txtText_Enter);
             this.txtText.Leave += new System.EventHandler(this.txtText_Leave);
@@ -70,30 +72,32 @@
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.txtFilter,
             this.btnFind,
             this.toolStripSeparator1,
             this.lblFind});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 328);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 632);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 5, 1, 5);
-            this.toolStrip1.Size = new System.Drawing.Size(524, 33);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 9, 2, 9);
+            this.toolStrip1.Size = new System.Drawing.Size(1048, 60);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(45, 20);
+            this.toolStripLabel1.Size = new System.Drawing.Size(97, 36);
             this.toolStripLabel1.Text = "Search:";
             // 
             // txtFilter
             // 
             this.txtFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFilter.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(150, 23);
+            this.txtFilter.Size = new System.Drawing.Size(298, 42);
             // 
             // btnFind
             // 
@@ -101,28 +105,29 @@
             this.btnFind.Image = global::WDBXEditor.Properties.Resources.search;
             this.btnFind.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(23, 20);
+            this.btnFind.Size = new System.Drawing.Size(46, 36);
             this.btnFind.Text = "toolStripButton1";
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 23);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 42);
             // 
             // lblFind
             // 
             this.lblFind.Name = "lblFind";
-            this.lblFind.Size = new System.Drawing.Size(109, 20);
+            this.lblFind.Size = new System.Drawing.Size(233, 36);
             this.lblFind.Text = "No matches found.";
             this.lblFind.Visible = false;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(356, 333);
+            this.btnSave.Location = new System.Drawing.Point(712, 641);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(150, 42);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -132,9 +137,10 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(437, 333);
+            this.btnClose.Location = new System.Drawing.Point(874, 641);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 14;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -143,17 +149,18 @@
             // TextEditor
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(524, 361);
+            this.ClientSize = new System.Drawing.Size(1048, 692);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(540, 400);
+            this.MinimumSize = new System.Drawing.Size(1054, 678);
             this.Name = "TextEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Text Editor";
