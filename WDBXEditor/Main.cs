@@ -99,7 +99,7 @@ namespace WDBXEditor
 		private void Main_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (Database.Entries.Count(x => x.Changed) > 0)
-				if (MessageBox.Show("You have unsaved changes. Do you wish to exit?", "Unsaved Changes", MessageBoxButtons.YesNo) == DialogResult.No)
+				if (MessageBox.Show("你有未保存的修改，确定退出么?", "未保存的修改", MessageBoxButtons.YesNo) == DialogResult.No)
 					e.Cancel = true;
 
 			if (!e.Cancel)
@@ -144,7 +144,7 @@ namespace WDBXEditor
 				//dt.Attach();
 
 				this.Tag = dt.Tag;
-				this.Text = $"WDBX Editor ({VERSION}) - {dt.FileName} {dt.BuildName}";
+				this.Text = $"WDBX Editor ({VERSION}) - {dt.FileName} {dt.BuildName} - 2025-03-09";
 				LoadedEntry = dt; //Set current table
 
 				_bindingsource.DataSource = dt.Data; //Change dataset

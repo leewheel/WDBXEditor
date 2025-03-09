@@ -45,11 +45,12 @@ namespace WDBXEditor
 					var serializer = new JavaScriptSerializer();
 
 					GithubReleaseModel model = serializer.Deserialize<GithubReleaseModel>(json);
-					if (model != null && model.tag_name != Constants.VERSION)
+					model.tag_name = "2.0.1.b";
+                    if (model != null && model.tag_name != Constants.VERSION)
 					{
-						string text = $"An update is available.\r\n Click \"Yes\" to upgrade to {model.tag_name}. (This will restart the application)";
+						string text = $"有个新版本可用.\r\n 点击 \"Yes\" 升级至 {model.tag_name}. (此操作会导致重启本软件)";
 
-						DialogResult dialogResult = MessageBox.Show(text, "Update Available", MessageBoxButtons.YesNo);
+						DialogResult dialogResult = MessageBox.Show(text, "有更新文件", MessageBoxButtons.YesNo);
 						RestartOnComplete = (dialogResult == DialogResult.Yes);
 						await DoDownload(model.assets[0].browser_download_url);
 					}
