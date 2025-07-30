@@ -46,7 +46,7 @@
             // txtFind
             // 
             this.txtFind.Location = new System.Drawing.Point(180, 22);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(6);
             this.txtFind.Name = "txtFind";
             this.txtFind.Size = new System.Drawing.Size(404, 35);
             this.txtFind.TabIndex = 0;
@@ -58,9 +58,9 @@
             this.label1.Location = new System.Drawing.Point(24, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 24);
+            this.label1.Size = new System.Drawing.Size(70, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Find what:";
+            this.label1.Text = "查找:";
             // 
             // label2
             // 
@@ -68,15 +68,15 @@
             this.label2.Location = new System.Drawing.Point(24, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 24);
+            this.label2.Size = new System.Drawing.Size(94, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Replace with:";
+            this.label2.Text = "替换为:";
             // 
             // txtReplace
             // 
             this.txtReplace.Enabled = false;
             this.txtReplace.Location = new System.Drawing.Point(180, 70);
-            this.txtReplace.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtReplace.Margin = new System.Windows.Forms.Padding(6);
             this.txtReplace.Name = "txtReplace";
             this.txtReplace.Size = new System.Drawing.Size(404, 35);
             this.txtReplace.TabIndex = 1;
@@ -85,11 +85,11 @@
             // 
             this.btnFind.Enabled = false;
             this.btnFind.Location = new System.Drawing.Point(638, 19);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(6);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(150, 42);
             this.btnFind.TabIndex = 2;
-            this.btnFind.Text = "Find Next";
+            this.btnFind.Text = "查找下一个";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -97,11 +97,11 @@
             // 
             this.btnReplace.Enabled = false;
             this.btnReplace.Location = new System.Drawing.Point(638, 73);
-            this.btnReplace.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReplace.Margin = new System.Windows.Forms.Padding(6);
             this.btnReplace.Name = "btnReplace";
             this.btnReplace.Size = new System.Drawing.Size(150, 42);
             this.btnReplace.TabIndex = 3;
-            this.btnReplace.Text = "Replace";
+            this.btnReplace.Text = "替换";
             this.btnReplace.UseVisualStyleBackColor = true;
             this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
             // 
@@ -109,22 +109,22 @@
             // 
             this.btnReplaceAll.Enabled = false;
             this.btnReplaceAll.Location = new System.Drawing.Point(638, 127);
-            this.btnReplaceAll.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReplaceAll.Margin = new System.Windows.Forms.Padding(6);
             this.btnReplaceAll.Name = "btnReplaceAll";
             this.btnReplaceAll.Size = new System.Drawing.Size(150, 42);
             this.btnReplaceAll.TabIndex = 4;
-            this.btnReplaceAll.Text = "Replace All";
+            this.btnReplaceAll.Text = "全部替换";
             this.btnReplaceAll.UseVisualStyleBackColor = true;
             this.btnReplaceAll.Click += new System.EventHandler(this.btnReplaceAll_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(638, 180);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 42);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -143,7 +143,7 @@
             // 
             this.chkCase.AutoSize = true;
             this.chkCase.Location = new System.Drawing.Point(274, 118);
-            this.chkCase.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chkCase.Margin = new System.Windows.Forms.Padding(6);
             this.chkCase.Name = "chkCase";
             this.chkCase.Size = new System.Drawing.Size(162, 28);
             this.chkCase.TabIndex = 7;
@@ -155,7 +155,7 @@
             // 
             this.chkExact.AutoSize = true;
             this.chkExact.Location = new System.Drawing.Point(274, 161);
-            this.chkExact.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chkExact.Margin = new System.Windows.Forms.Padding(6);
             this.chkExact.Name = "chkExact";
             this.chkExact.Size = new System.Drawing.Size(354, 28);
             this.chkExact.TabIndex = 8;
@@ -167,7 +167,7 @@
             this.rdoText.AutoSize = true;
             this.rdoText.Checked = true;
             this.rdoText.Location = new System.Drawing.Point(274, 203);
-            this.rdoText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rdoText.Margin = new System.Windows.Forms.Padding(6);
             this.rdoText.Name = "rdoText";
             this.rdoText.Size = new System.Drawing.Size(149, 28);
             this.rdoText.TabIndex = 10;
@@ -179,7 +179,7 @@
             // 
             this.rdoFlag.AutoSize = true;
             this.rdoFlag.Location = new System.Drawing.Point(438, 203);
-            this.rdoFlag.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rdoFlag.Margin = new System.Windows.Forms.Padding(6);
             this.rdoFlag.Name = "rdoFlag";
             this.rdoFlag.Size = new System.Drawing.Size(149, 28);
             this.rdoFlag.TabIndex = 11;
@@ -205,14 +205,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFind);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(774, 250);
             this.Name = "FindReplace";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Find";
+            this.Text = "查找";
             this.Activated += new System.EventHandler(this.FindReplace_Activated);
             this.Deactivate += new System.EventHandler(this.FindReplace_Deactivate);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FindReplace_FormClosing);

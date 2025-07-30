@@ -97,7 +97,7 @@
             // txtHost
             // 
             this.txtHost.Location = new System.Drawing.Point(134, 20);
-            this.txtHost.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtHost.Margin = new System.Windows.Forms.Padding(6);
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(546, 35);
             this.txtHost.TabIndex = 1;
@@ -106,7 +106,7 @@
             // txtPort
             // 
             this.txtPort.Location = new System.Drawing.Point(134, 68);
-            this.txtPort.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPort.Margin = new System.Windows.Forms.Padding(6);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(546, 35);
             this.txtPort.TabIndex = 2;
@@ -115,7 +115,7 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(134, 116);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(6);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(546, 35);
             this.txtUser.TabIndex = 3;
@@ -124,7 +124,7 @@
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(134, 164);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(546, 35);
             this.txtPass.TabIndex = 4;
@@ -146,7 +146,7 @@
             this.ddlDatabases.Enabled = false;
             this.ddlDatabases.FormattingEnabled = true;
             this.ddlDatabases.Location = new System.Drawing.Point(134, 212);
-            this.ddlDatabases.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ddlDatabases.Margin = new System.Windows.Forms.Padding(6);
             this.ddlDatabases.Name = "ddlDatabases";
             this.ddlDatabases.Size = new System.Drawing.Size(400, 32);
             this.ddlDatabases.TabIndex = 6;
@@ -155,7 +155,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(550, 212);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(6);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(134, 39);
             this.btnRefresh.TabIndex = 5;
@@ -185,7 +185,7 @@
             this.panel1.Controls.Add(this.txtHost);
             this.panel1.Controls.Add(this.txtPort);
             this.panel1.Location = new System.Drawing.Point(24, 22);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(712, 474);
             this.panel1.TabIndex = 11;
@@ -195,7 +195,7 @@
             this.ddlTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlTable.FormattingEnabled = true;
             this.ddlTable.Location = new System.Drawing.Point(132, 262);
-            this.ddlTable.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ddlTable.Margin = new System.Windows.Forms.Padding(6);
             this.ddlTable.Name = "ddlTable";
             this.ddlTable.Size = new System.Drawing.Size(402, 32);
             this.ddlTable.TabIndex = 7;
@@ -250,7 +250,7 @@
             this.radNewOnly.AutoSize = true;
             this.radNewOnly.Checked = true;
             this.radNewOnly.Location = new System.Drawing.Point(93, 312);
-            this.radNewOnly.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radNewOnly.Margin = new System.Windows.Forms.Padding(6);
             this.radNewOnly.Name = "radNewOnly";
             this.radNewOnly.Size = new System.Drawing.Size(161, 28);
             this.radNewOnly.TabIndex = 8;
@@ -262,7 +262,7 @@
             // 
             this.radOverride.AutoSize = true;
             this.radOverride.Location = new System.Drawing.Point(512, 312);
-            this.radOverride.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radOverride.Margin = new System.Windows.Forms.Padding(6);
             this.radOverride.Name = "radOverride";
             this.radOverride.Size = new System.Drawing.Size(185, 28);
             this.radOverride.TabIndex = 10;
@@ -273,7 +273,7 @@
             // 
             this.radUpdate.AutoSize = true;
             this.radUpdate.Location = new System.Drawing.Point(266, 312);
-            this.radUpdate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radUpdate.Margin = new System.Windows.Forms.Padding(6);
             this.radUpdate.Name = "radUpdate";
             this.radUpdate.Size = new System.Drawing.Size(221, 28);
             this.radUpdate.TabIndex = 9;
@@ -284,7 +284,7 @@
             // 
             this.btnLoad.Enabled = false;
             this.btnLoad.Location = new System.Drawing.Point(424, 508);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(6);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(150, 42);
             this.btnLoad.TabIndex = 11;
@@ -295,7 +295,7 @@
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(586, 508);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 12;
@@ -314,7 +314,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(766, 628);
             this.MinimizeBox = false;

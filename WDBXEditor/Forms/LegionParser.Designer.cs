@@ -48,9 +48,10 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(262, 1);
+            this.btnSelect.Location = new System.Drawing.Point(524, 2);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(75, 23);
+            this.btnSelect.Size = new System.Drawing.Size(150, 42);
             this.btnSelect.TabIndex = 0;
             this.btnSelect.Text = "Select Files";
             this.btnSelect.UseVisualStyleBackColor = true;
@@ -59,25 +60,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Location = new System.Drawing.Point(6, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(178, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Build Number: ";
             // 
             // txtBuild
             // 
-            this.txtBuild.Location = new System.Drawing.Point(85, 3);
+            this.txtBuild.Location = new System.Drawing.Point(170, 6);
+            this.txtBuild.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtBuild.Name = "txtBuild";
-            this.txtBuild.Size = new System.Drawing.Size(171, 20);
+            this.txtBuild.Size = new System.Drawing.Size(338, 35);
             this.txtBuild.TabIndex = 2;
             // 
             // btnParse
             // 
             this.btnParse.Enabled = false;
-            this.btnParse.Location = new System.Drawing.Point(343, 1);
+            this.btnParse.Location = new System.Drawing.Point(686, 2);
+            this.btnParse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnParse.Name = "btnParse";
-            this.btnParse.Size = new System.Drawing.Size(75, 23);
+            this.btnParse.Size = new System.Drawing.Size(150, 42);
             this.btnParse.TabIndex = 3;
             this.btnParse.Text = "Parse";
             this.btnParse.UseVisualStyleBackColor = true;
@@ -86,9 +90,10 @@
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(367, 352);
+            this.btnClose.Location = new System.Drawing.Point(734, 650);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -96,9 +101,10 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(286, 352);
+            this.btnSave.Location = new System.Drawing.Point(572, 650);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(150, 42);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -108,9 +114,10 @@
             // 
             this.rdoCASC.AutoSize = true;
             this.rdoCASC.Checked = true;
-            this.rdoCASC.Location = new System.Drawing.Point(85, 29);
+            this.rdoCASC.Location = new System.Drawing.Point(170, 54);
+            this.rdoCASC.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdoCASC.Name = "rdoCASC";
-            this.rdoCASC.Size = new System.Drawing.Size(79, 17);
+            this.rdoCASC.Size = new System.Drawing.Size(149, 28);
             this.rdoCASC.TabIndex = 8;
             this.rdoCASC.TabStop = true;
             this.rdoCASC.Text = "From CASC";
@@ -119,18 +126,20 @@
             // rdoFile
             // 
             this.rdoFile.AutoSize = true;
-            this.rdoFile.Location = new System.Drawing.Point(170, 29);
+            this.rdoFile.Location = new System.Drawing.Point(340, 54);
+            this.rdoFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdoFile.Name = "rdoFile";
-            this.rdoFile.Size = new System.Drawing.Size(67, 17);
+            this.rdoFile.Size = new System.Drawing.Size(149, 28);
             this.rdoFile.TabIndex = 9;
             this.rdoFile.Text = "From File";
             this.rdoFile.UseVisualStyleBackColor = true;
             // 
             // autoProgressBar1
             // 
-            this.autoProgressBar1.Location = new System.Drawing.Point(15, 352);
+            this.autoProgressBar1.Location = new System.Drawing.Point(30, 650);
+            this.autoProgressBar1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.autoProgressBar1.Name = "autoProgressBar1";
-            this.autoProgressBar1.Size = new System.Drawing.Size(265, 23);
+            this.autoProgressBar1.Size = new System.Drawing.Size(530, 42);
             this.autoProgressBar1.TabIndex = 6;
             // 
             // panel1
@@ -141,9 +150,10 @@
             this.panel1.Controls.Add(this.btnParse);
             this.panel1.Controls.Add(this.btnSelect);
             this.panel1.Controls.Add(this.rdoCASC);
-            this.panel1.Location = new System.Drawing.Point(11, 12);
+            this.panel1.Location = new System.Drawing.Point(22, 22);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 49);
+            this.panel1.Size = new System.Drawing.Size(862, 90);
             this.panel1.TabIndex = 10;
             // 
             // dgFiles
@@ -157,41 +167,46 @@
             this.dgFiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.File,
             this.Parsed});
-            this.dgFiles.Location = new System.Drawing.Point(11, 67);
+            this.dgFiles.Location = new System.Drawing.Point(22, 124);
+            this.dgFiles.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dgFiles.Name = "dgFiles";
             this.dgFiles.ReadOnly = true;
-            this.dgFiles.Size = new System.Drawing.Size(431, 279);
+            this.dgFiles.RowHeadersWidth = 82;
+            this.dgFiles.Size = new System.Drawing.Size(862, 515);
             this.dgFiles.TabIndex = 11;
             // 
             // File
             // 
             this.File.FillWeight = 250F;
             this.File.HeaderText = "DB File";
+            this.File.MinimumWidth = 10;
             this.File.Name = "File";
             this.File.ReadOnly = true;
             // 
             // Parsed
             // 
             this.Parsed.HeaderText = "Parsed";
+            this.Parsed.MinimumWidth = 10;
             this.Parsed.Name = "Parsed";
             this.Parsed.ReadOnly = true;
             // 
             // LegionParser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(454, 387);
+            this.ClientSize = new System.Drawing.Size(888, 655);
             this.Controls.Add(this.dgFiles);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.autoProgressBar1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(470, 426);
+            this.MaximumSize = new System.Drawing.Size(914, 726);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(470, 426);
+            this.MinimumSize = new System.Drawing.Size(914, 726);
             this.Name = "LegionParser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Legion Parser (WDB5, WDB6)";

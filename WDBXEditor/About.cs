@@ -16,5 +16,10 @@ namespace WDBXEditor
         {
             InitializeComponent();
         }
+
+        private void txtAbout_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

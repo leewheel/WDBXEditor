@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadHotfix));
             this.label3 = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             // btnLoad
             // 
             this.btnLoad.Location = new System.Drawing.Point(232, 430);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(6);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(150, 42);
             this.btnLoad.TabIndex = 15;
@@ -58,7 +59,7 @@
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(394, 430);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 16;
@@ -85,7 +86,8 @@
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lbDefinitions);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(574, 550);
             this.MinimizeBox = false;

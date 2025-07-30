@@ -94,7 +94,9 @@ namespace WDBXEditor
 			LoadRecentList();
 
 			this.Text = $"WDBX Editor ({VERSION})";
-		}
+			this.advancedDataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            this.advancedDataGridView.RowTemplate.Height = 25; // 设置固定行高
+        }
 
 		private void Main_FormClosing(object sender, FormClosingEventArgs e)
 		{
@@ -144,7 +146,7 @@ namespace WDBXEditor
 				//dt.Attach();
 
 				this.Tag = dt.Tag;
-				this.Text = $"WDBX Editor ({VERSION}) - {dt.FileName} {dt.BuildName} - 2025-03-09";
+				this.Text = $"WDBX Editor 2025 Edition ({VERSION}) - {dt.FileName} {dt.BuildName}";
 				LoadedEntry = dt; //Set current table
 
 				_bindingsource.DataSource = dt.Data; //Change dataset
@@ -648,7 +650,7 @@ namespace WDBXEditor
 						if (x.IsFaulted)
 							MessageBox.Show("An error occured exporting to SQL.");
 						else
-							MessageBox.Show("Sucessfully exported to SQL.");
+							MessageBox.Show("成功导出至SQL。");
 
 						ProgressBarHandle(false);
 					}, TaskScheduler.FromCurrentSynchronizationContext());
@@ -1089,7 +1091,7 @@ namespace WDBXEditor
 
 			int id = 0;
 			string res = "";
-			if (ShowInputDialog("Id:", "Go to Id", 0.ToString(), ref res) == DialogResult.OK)
+			if (ShowInputDialog("Id:", "转到Id", 0.ToString(), ref res) == DialogResult.OK)
 			{
 				if (int.TryParse(res, out id)) //Ensure the result is an integer
 				{
@@ -1097,10 +1099,10 @@ namespace WDBXEditor
 					if (index >= 0)
 						advancedDataGridView.SelectRow(index);
 					else
-						MessageBox.Show($"Id {id} doesn't exist.");
+						MessageBox.Show($"Id {id} 不存在");
 				}
 				else
-					MessageBox.Show($"Invalid Id.");
+					MessageBox.Show($"无效ID.");
 			}
 		}
 

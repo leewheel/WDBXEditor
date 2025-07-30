@@ -85,14 +85,14 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Process";
+            this.label1.Text = "WOW进程";
             // 
             // cbProcessSelector
             // 
             this.cbProcessSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProcessSelector.FormattingEnabled = true;
             this.cbProcessSelector.Location = new System.Drawing.Point(108, 6);
-            this.cbProcessSelector.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbProcessSelector.Margin = new System.Windows.Forms.Padding(6);
             this.cbProcessSelector.Name = "cbProcessSelector";
             this.cbProcessSelector.Size = new System.Drawing.Size(248, 32);
             this.cbProcessSelector.TabIndex = 1;
@@ -110,7 +110,7 @@
             this.panel1.Controls.Add(this.cbProcessSelector);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(24, 22);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(908, 585);
             this.panel1.TabIndex = 2;
@@ -119,7 +119,7 @@
             // 
             this.btnRefresh.Image = global::WDBXEditor.Properties.Resources.reload;
             this.btnRefresh.Location = new System.Drawing.Point(372, 4);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(6);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(58, 42);
             this.btnRefresh.TabIndex = 8;
@@ -140,23 +140,23 @@
             this.grpLoc.Controls.Add(this.txtCurMap);
             this.grpLoc.Controls.Add(this.label9);
             this.grpLoc.Location = new System.Drawing.Point(424, 55);
-            this.grpLoc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grpLoc.Margin = new System.Windows.Forms.Padding(6);
             this.grpLoc.Name = "grpLoc";
-            this.grpLoc.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grpLoc.Padding = new System.Windows.Forms.Padding(6);
             this.grpLoc.Size = new System.Drawing.Size(478, 281);
             this.grpLoc.TabIndex = 7;
             this.grpLoc.TabStop = false;
-            this.grpLoc.Text = "Location";
+            this.grpLoc.Text = "位置";
             // 
             // chkAuto
             // 
             this.chkAuto.AutoSize = true;
             this.chkAuto.Location = new System.Drawing.Point(114, 234);
-            this.chkAuto.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chkAuto.Margin = new System.Windows.Forms.Padding(6);
             this.chkAuto.Name = "chkAuto";
-            this.chkAuto.Size = new System.Drawing.Size(174, 28);
+            this.chkAuto.Size = new System.Drawing.Size(138, 28);
             this.chkAuto.TabIndex = 29;
-            this.chkAuto.Text = "Auto Update";
+            this.chkAuto.Text = "自动刷新";
             this.toolTip1.SetToolTip(this.chkAuto, "Poll player location");
             this.chkAuto.UseVisualStyleBackColor = true;
             this.chkAuto.CheckedChanged += new System.EventHandler(this.chkAuto_CheckedChanged);
@@ -164,18 +164,18 @@
             // btnGetPos
             // 
             this.btnGetPos.Location = new System.Drawing.Point(300, 227);
-            this.btnGetPos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnGetPos.Margin = new System.Windows.Forms.Padding(6);
             this.btnGetPos.Name = "btnGetPos";
             this.btnGetPos.Size = new System.Drawing.Size(166, 42);
             this.btnGetPos.TabIndex = 28;
-            this.btnGetPos.Text = "Get Location";
+            this.btnGetPos.Text = "获取位置";
             this.btnGetPos.UseVisualStyleBackColor = true;
             this.btnGetPos.Click += new System.EventHandler(this.btnGetPos_Click);
             // 
             // txtCurYPos
             // 
             this.txtCurYPos.Location = new System.Drawing.Point(114, 131);
-            this.txtCurYPos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCurYPos.Margin = new System.Windows.Forms.Padding(6);
             this.txtCurYPos.MaxLength = 14;
             this.txtCurYPos.Name = "txtCurYPos";
             this.txtCurYPos.Size = new System.Drawing.Size(348, 35);
@@ -194,7 +194,7 @@
             // txtCurXPos
             // 
             this.txtCurXPos.Location = new System.Drawing.Point(114, 83);
-            this.txtCurXPos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCurXPos.Margin = new System.Windows.Forms.Padding(6);
             this.txtCurXPos.MaxLength = 14;
             this.txtCurXPos.Name = "txtCurXPos";
             this.txtCurXPos.Size = new System.Drawing.Size(348, 35);
@@ -213,7 +213,7 @@
             // txtCurZPos
             // 
             this.txtCurZPos.Location = new System.Drawing.Point(114, 179);
-            this.txtCurZPos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCurZPos.Margin = new System.Windows.Forms.Padding(6);
             this.txtCurZPos.MaxLength = 14;
             this.txtCurZPos.Name = "txtCurZPos";
             this.txtCurZPos.Size = new System.Drawing.Size(348, 35);
@@ -232,7 +232,7 @@
             // txtCurMap
             // 
             this.txtCurMap.Location = new System.Drawing.Point(114, 35);
-            this.txtCurMap.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCurMap.Margin = new System.Windows.Forms.Padding(6);
             this.txtCurMap.MaxLength = 14;
             this.txtCurMap.Name = "txtCurMap";
             this.txtCurMap.Size = new System.Drawing.Size(348, 35);
@@ -270,29 +270,29 @@
             this.grpOffsets.Controls.Add(this.txtClientConnection);
             this.grpOffsets.Controls.Add(this.label3);
             this.grpOffsets.Location = new System.Drawing.Point(12, 55);
-            this.grpOffsets.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grpOffsets.Margin = new System.Windows.Forms.Padding(6);
             this.grpOffsets.Name = "grpOffsets";
-            this.grpOffsets.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grpOffsets.Padding = new System.Windows.Forms.Padding(6);
             this.grpOffsets.Size = new System.Drawing.Size(400, 526);
             this.grpOffsets.TabIndex = 6;
             this.grpOffsets.TabStop = false;
-            this.grpOffsets.Text = "Offsets";
+            this.grpOffsets.Text = "偏移值";
             // 
             // chkUseBase
             // 
             this.chkUseBase.AutoSize = true;
             this.chkUseBase.Location = new System.Drawing.Point(20, 83);
-            this.chkUseBase.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chkUseBase.Margin = new System.Windows.Forms.Padding(6);
             this.chkUseBase.Name = "chkUseBase";
-            this.chkUseBase.Size = new System.Drawing.Size(234, 28);
+            this.chkUseBase.Size = new System.Drawing.Size(186, 28);
             this.chkUseBase.TabIndex = 9;
-            this.chkUseBase.Text = "Use Base Address";
+            this.chkUseBase.Text = "使用基本地址";
             this.chkUseBase.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(76, 469);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 42);
             this.btnDelete.TabIndex = 27;
@@ -303,7 +303,7 @@
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(238, 469);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 42);
             this.btnSave.TabIndex = 26;
@@ -314,7 +314,7 @@
             // txtPosX
             // 
             this.txtPosX.Location = new System.Drawing.Point(206, 412);
-            this.txtPosX.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPosX.Margin = new System.Windows.Forms.Padding(6);
             this.txtPosX.MaxLength = 14;
             this.txtPosX.Name = "txtPosX";
             this.txtPosX.Size = new System.Drawing.Size(178, 35);
@@ -334,7 +334,7 @@
             // txtGUID
             // 
             this.txtGUID.Location = new System.Drawing.Point(206, 364);
-            this.txtGUID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtGUID.Margin = new System.Windows.Forms.Padding(6);
             this.txtGUID.MaxLength = 14;
             this.txtGUID.Name = "txtGUID";
             this.txtGUID.Size = new System.Drawing.Size(178, 35);
@@ -354,7 +354,7 @@
             // txtMapId
             // 
             this.txtMapId.Location = new System.Drawing.Point(206, 316);
-            this.txtMapId.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtMapId.Margin = new System.Windows.Forms.Padding(6);
             this.txtMapId.MaxLength = 14;
             this.txtMapId.Name = "txtMapId";
             this.txtMapId.Size = new System.Drawing.Size(178, 35);
@@ -374,7 +374,7 @@
             // txtNextObject
             // 
             this.txtNextObject.Location = new System.Drawing.Point(206, 268);
-            this.txtNextObject.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNextObject.Margin = new System.Windows.Forms.Padding(6);
             this.txtNextObject.MaxLength = 14;
             this.txtNextObject.Name = "txtNextObject";
             this.txtNextObject.Size = new System.Drawing.Size(178, 35);
@@ -394,7 +394,7 @@
             // txtLocalGUID
             // 
             this.txtLocalGUID.Location = new System.Drawing.Point(206, 220);
-            this.txtLocalGUID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtLocalGUID.Margin = new System.Windows.Forms.Padding(6);
             this.txtLocalGUID.MaxLength = 14;
             this.txtLocalGUID.Name = "txtLocalGUID";
             this.txtLocalGUID.Size = new System.Drawing.Size(178, 35);
@@ -414,7 +414,7 @@
             // txtFirstObject
             // 
             this.txtFirstObject.Location = new System.Drawing.Point(206, 172);
-            this.txtFirstObject.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFirstObject.Margin = new System.Windows.Forms.Padding(6);
             this.txtFirstObject.MaxLength = 14;
             this.txtFirstObject.Name = "txtFirstObject";
             this.txtFirstObject.Size = new System.Drawing.Size(178, 35);
@@ -434,7 +434,7 @@
             // txtObjectManager
             // 
             this.txtObjectManager.Location = new System.Drawing.Point(206, 124);
-            this.txtObjectManager.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtObjectManager.Margin = new System.Windows.Forms.Padding(6);
             this.txtObjectManager.MaxLength = 14;
             this.txtObjectManager.Name = "txtObjectManager";
             this.txtObjectManager.Size = new System.Drawing.Size(178, 35);
@@ -454,7 +454,7 @@
             // txtClientConnection
             // 
             this.txtClientConnection.Location = new System.Drawing.Point(206, 35);
-            this.txtClientConnection.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtClientConnection.Margin = new System.Windows.Forms.Padding(6);
             this.txtClientConnection.MaxLength = 14;
             this.txtClientConnection.Name = "txtClientConnection";
             this.txtClientConnection.Size = new System.Drawing.Size(178, 35);
@@ -467,16 +467,16 @@
             this.label3.Location = new System.Drawing.Point(14, 41);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 24);
+            this.label3.Size = new System.Drawing.Size(154, 24);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Client Connection";
+            this.label3.Text = "连接的客户端";
             // 
             // btnUntarget
             // 
             this.btnUntarget.Enabled = false;
             this.btnUntarget.Image = global::WDBXEditor.Properties.Resources.close;
             this.btnUntarget.Location = new System.Drawing.Point(844, 4);
-            this.btnUntarget.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnUntarget.Margin = new System.Windows.Forms.Padding(6);
             this.btnUntarget.Name = "btnUntarget";
             this.btnUntarget.Size = new System.Drawing.Size(58, 42);
             this.btnUntarget.TabIndex = 5;
@@ -489,7 +489,7 @@
             this.btnTarget.Enabled = false;
             this.btnTarget.Image = global::WDBXEditor.Properties.Resources.target;
             this.btnTarget.Location = new System.Drawing.Point(774, 4);
-            this.btnTarget.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnTarget.Margin = new System.Windows.Forms.Padding(6);
             this.btnTarget.Name = "btnTarget";
             this.btnTarget.Size = new System.Drawing.Size(58, 42);
             this.btnTarget.TabIndex = 4;
@@ -503,16 +503,16 @@
             this.label2.Location = new System.Drawing.Point(442, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 24);
+            this.label2.Size = new System.Drawing.Size(58, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Build";
+            this.label2.Text = "版本";
             // 
             // cbBuildSelector
             // 
             this.cbBuildSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBuildSelector.FormattingEnabled = true;
             this.cbBuildSelector.Location = new System.Drawing.Point(514, 6);
-            this.cbBuildSelector.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbBuildSelector.Margin = new System.Windows.Forms.Padding(6);
             this.cbBuildSelector.Name = "cbBuildSelector";
             this.cbBuildSelector.Size = new System.Drawing.Size(244, 32);
             this.cbBuildSelector.TabIndex = 2;
@@ -530,9 +530,9 @@
             this.lblErr.Location = new System.Drawing.Point(454, 369);
             this.lblErr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblErr.Name = "lblErr";
-            this.lblErr.Size = new System.Drawing.Size(610, 24);
+            this.lblErr.Size = new System.Drawing.Size(394, 24);
             this.lblErr.TabIndex = 30;
-            this.lblErr.Text = "Player Location requires Administrator privileges.";
+            this.lblErr.Text = "玩家定位需要管理员权限运行软件。";
             this.lblErr.Visible = false;
             // 
             // PlayerLocation
@@ -543,9 +543,9 @@
             this.Controls.Add(this.lblErr);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "PlayerLocation";
-            this.Text = "Player Location Reader";
+            this.Text = "玩家位置读取";
             this.Activated += new System.EventHandler(this.PlayerLocation_Activated);
             this.Deactivate += new System.EventHandler(this.PlayerLocation_Deactivate);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlayerLocation_FormClosing);

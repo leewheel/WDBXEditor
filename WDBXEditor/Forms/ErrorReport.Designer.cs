@@ -37,21 +37,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(24, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 13);
+            this.label1.Size = new System.Drawing.Size(178, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "The following errors occured:";
+            this.label1.Text = "以下错误发生：";
             // 
             // txtErrors
             // 
             this.txtErrors.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtErrors.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtErrors.Location = new System.Drawing.Point(12, 25);
+            this.txtErrors.Location = new System.Drawing.Point(24, 46);
+            this.txtErrors.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtErrors.Name = "txtErrors";
             this.txtErrors.ReadOnly = true;
-            this.txtErrors.Size = new System.Drawing.Size(437, 333);
+            this.txtErrors.Size = new System.Drawing.Size(870, 611);
             this.txtErrors.TabIndex = 1;
             this.txtErrors.Text = "";
             // 
@@ -59,28 +61,30 @@
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnOK.Location = new System.Drawing.Point(374, 364);
+            this.btnOK.Location = new System.Drawing.Point(748, 672);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(150, 42);
             this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "Close";
+            this.btnOK.Text = "关闭";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // ErrorReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnOK;
-            this.ClientSize = new System.Drawing.Size(461, 390);
+            this.ClientSize = new System.Drawing.Size(922, 720);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtErrors);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ErrorReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Error Report";
+            this.Text = "错误报告";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ErrorReport_Load);
             this.ResumeLayout(false);

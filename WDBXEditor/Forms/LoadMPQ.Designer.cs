@@ -55,7 +55,7 @@ namespace WDBXEditor
             this.panel1.Controls.Add(this.btnBrowse);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(24, 22);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(768, 526);
             this.panel1.TabIndex = 14;
@@ -81,7 +81,7 @@ namespace WDBXEditor
             "ZhCN",
             "ZhTW"});
             this.cbLocales.Location = new System.Drawing.Point(514, 13);
-            this.cbLocales.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbLocales.Margin = new System.Windows.Forms.Padding(6);
             this.cbLocales.Name = "cbLocales";
             this.cbLocales.Size = new System.Drawing.Size(106, 32);
             this.cbLocales.Sorted = true;
@@ -91,7 +91,7 @@ namespace WDBXEditor
             // 
             this.btnParse.Enabled = false;
             this.btnParse.Location = new System.Drawing.Point(630, 11);
-            this.btnParse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnParse.Margin = new System.Windows.Forms.Padding(6);
             this.btnParse.Name = "btnParse";
             this.btnParse.Size = new System.Drawing.Size(118, 42);
             this.btnParse.TabIndex = 9;
@@ -104,7 +104,7 @@ namespace WDBXEditor
             this.lstFiles.FormattingEnabled = true;
             this.lstFiles.ItemHeight = 24;
             this.lstFiles.Location = new System.Drawing.Point(16, 72);
-            this.lstFiles.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstFiles.Margin = new System.Windows.Forms.Padding(6);
             this.lstFiles.Name = "lstFiles";
             this.lstFiles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lstFiles.Size = new System.Drawing.Size(728, 436);
@@ -114,7 +114,7 @@ namespace WDBXEditor
             // txtFilePath
             // 
             this.txtFilePath.Location = new System.Drawing.Point(74, 13);
-            this.txtFilePath.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFilePath.Margin = new System.Windows.Forms.Padding(6);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.ReadOnly = true;
             this.txtFilePath.Size = new System.Drawing.Size(294, 35);
@@ -123,7 +123,7 @@ namespace WDBXEditor
             // btnBrowse
             // 
             this.btnBrowse.Location = new System.Drawing.Point(384, 11);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(6);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(118, 42);
             this.btnBrowse.TabIndex = 2;
@@ -150,7 +150,7 @@ namespace WDBXEditor
             // 
             this.btnLoad.Enabled = false;
             this.btnLoad.Location = new System.Drawing.Point(480, 559);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(6);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(150, 42);
             this.btnLoad.TabIndex = 15;
@@ -161,7 +161,7 @@ namespace WDBXEditor
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(642, 558);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 16;
@@ -176,7 +176,7 @@ namespace WDBXEditor
             // progressBar
             // 
             this.progressBar.Location = new System.Drawing.Point(40, 561);
-            this.progressBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(6);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(428, 39);
             this.progressBar.TabIndex = 17;
@@ -192,7 +192,7 @@ namespace WDBXEditor
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(812, 700);
             this.MinimizeBox = false;

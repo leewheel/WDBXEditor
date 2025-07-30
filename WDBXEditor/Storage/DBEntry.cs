@@ -494,58 +494,113 @@ namespace WDBXEditor.Storage
 			return sb.ToString();
 		}
 
-		/// <summary>
-		/// Uses MysqlBulkCopy to import the data directly into a database
-		/// </summary>
-		/// <param name="connectionstring"></param>
-		public void ToSQLTable(string connectionstring)
-		{
-			string tableName = $"db_{TableStructure.Name}_{Build}";
-			string csvName = Path.Combine(TEMP_FOLDER, tableName + ".csv");
-			StringBuilder sb = new StringBuilder();
-			sb.AppendLine("SET SESSION sql_mode = 'NO_ENGINE_SUBSTITUTION';");
-			sb.AppendLine($"DROP TABLE IF EXISTS `{tableName}`; ");
-			sb.AppendLine($"CREATE TABLE `{tableName}` ({Data.Columns.ToSql(Key)}) ENGINE=InnoDB DEFAULT CHARACTER SET = utf8 COLLATE = utf8_unicode_ci; ");
+        /// <summary>
+        /// Uses MysqlBulkCopy to import the data directly into a database
+        /// </summary>
+        /// <param name="connectionstring"></param>
+        //public void ToSQLTable(string connectionstring)
+        //{
+        //	string tableName = $"db_{TableStructure.Name}_{Build}";
+        //	string csvName = Path.Combine(TEMP_FOLDER, tableName + ".csv");
+        //	StringBuilder sb = new StringBuilder();
+        //	sb.AppendLine("SET SESSION sql_mode = 'NO_ENGINE_SUBSTITUTION';");
+        //	sb.AppendLine($"DROP TABLE IF EXISTS `{tableName}`; ");
+        //	sb.AppendLine($"CREATE TABLE `{tableName}` ({Data.Columns.ToSql(Key)}) ENGINE=InnoDB DEFAULT CHARACTER SET = utf8 COLLATE = utf8_unicode_ci; ");
 
-			using (StreamWriter csv = new StreamWriter(csvName))
-				csv.Write(ToCSV());
+        //	using (StreamWriter csv = new StreamWriter(csvName))
+        //		csv.Write(ToCSV());
 
-			using (MySqlConnection connection = new MySqlConnection(connectionstring))
-			{
-				connection.Open();
+        //	using (MySqlConnection connection = new MySqlConnection(connectionstring))
+        //	{
+        //		connection.Open();
 
-				using (MySqlCommand command = new MySqlCommand(sb.ToString(), connection))
-					command.ExecuteNonQuery();
+        //		using (MySqlCommand command = new MySqlCommand(sb.ToString(), connection))
+        //			command.ExecuteNonQuery();
 
+        //              try
+        //              {
+        //			new MySqlBulkLoader(connection)
+        //			{
+        //				TableName = $"`{tableName}`",
+        //				FieldTerminator = ",",
+        //				LineTerminator = "\r\n",
+        //				NumberOfLinesToSkip = 1,
+        //				FileName = csvName,
+        //				FieldQuotationCharacter = '"',
+        //				CharacterSet = "UTF8"
+        //			}.Load();
+        //		}
+        //		catch (Exception ex)
+        //		{
+        //			MessageBox.Show(ex.Message);
+        //			throw;
+        //		}
+        //	}
+
+        //	try { File.Delete(csvName); }
+        //	catch (Exception ex) { }
+        //}
+        public void ToSQLTable(string connectionstring)
+        {
+            string tableName = $"db_{TableStructure.Name}_{Build}";
+            string csvName = Path.Combine(TEMP_FOLDER, tableName + ".csv");
+
+            // 生成建表语句
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"DROP TABLE IF EXISTS `{tableName}`;");
+            sb.AppendLine($"CREATE TABLE `{tableName}` ({Data.Columns.ToSql(Key)}) ENGINE=InnoDB DEFAULT CHARACTER SET = utf8 COLLATE = utf8_unicode_ci;");
+
+            // 写CSV文件
+            using (StreamWriter csv = new StreamWriter(csvName))
+                csv.Write(ToCSV());
+
+            using (MySqlConnection connection = new MySqlConnection(connectionstring))
+            {
+                connection.Open();
+
+                // 设置 SQL_MODE，关闭反斜杠转义
+                using (MySqlCommand command = new MySqlCommand("SET SESSION sql_mode = 'NO_ENGINE_SUBSTITUTION,NO_BACKSLASH_ESCAPES';", connection))
+                    command.ExecuteNonQuery();
+
+                // 执行建表
+                using (MySqlCommand command = new MySqlCommand(sb.ToString(), connection))
+                    command.ExecuteNonQuery();
+
+                // BulkLoader 导入
                 try
                 {
-					new MySqlBulkLoader(connection)
-					{
-						TableName = $"`{tableName}`",
-						FieldTerminator = ",",
-						LineTerminator = "\r\n",
-						NumberOfLinesToSkip = 1,
-						FileName = csvName,
-						FieldQuotationCharacter = '"',
-						CharacterSet = "UTF8"
-					}.Load();
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show(ex.Message);
-					throw;
-				}
-			}
+                    var bulkLoader = new MySqlBulkLoader(connection)
+                    {
+                        TableName = tableName, // 注意这里不用反引号
+                        FieldTerminator = ",",
+                        LineTerminator = "\r\n",
+                        NumberOfLinesToSkip = 1,
+                        FileName = csvName,
+                        FieldQuotationCharacter = '"',
+                        CharacterSet = "UTF8",
+                        EscapeCharacter = '\\' // 这行虽然默认就是\, 但保留确保明确
+                    };
 
-			try { File.Delete(csvName); }
-			catch (Exception ex) { }
-		}
+                    bulkLoader.Load();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
+            }
 
-		/// <summary>
-		/// Generates a CSV file string
-		/// </summary>
-		/// <returns></returns>
-		public string ToCSV()
+            // 删除CSV临时文件
+            try { File.Delete(csvName); }
+            catch (Exception ex) { }
+        }
+
+
+        /// <summary>
+        /// Generates a CSV file string
+        /// </summary>
+        /// <returns></returns>
+        public string ToCSV()
 		{
 			Func<string, string> EncodeCsv = s => { return string.Concat("\"", s.Replace(Environment.NewLine, string.Empty).Replace("\"", "\"\""), "\""); };
 

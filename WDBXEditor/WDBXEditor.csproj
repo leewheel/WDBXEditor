@@ -97,7 +97,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <ApplicationIcon>WDBX.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>WDBXEditor.Program</StartupObject>
@@ -530,6 +530,7 @@
     <None Include="Resources\target.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\paintbrush.png" />
+    <Content Include="WDBX.ico" />
     <Content Include="x64\StormLib.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -32,6 +32,7 @@ namespace WDBXEditor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.gbFiles = new System.Windows.Forms.GroupBox();
             this.gbFilter = new System.Windows.Forms.GroupBox();
@@ -40,13 +41,11 @@ namespace WDBXEditor
             this.label6 = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.lbFiles = new WDBXEditor.Common.BufferedListBox();
             this.filecontextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gbSettings = new System.Windows.Forms.GroupBox();
             this.lblCurrentProcess = new System.Windows.Forms.Label();
-            this.progressBar = new WDBXEditor.Common.AutoProgressBar();
             this.txtStats = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCurrentCell = new System.Windows.Forms.TextBox();
@@ -108,10 +107,12 @@ namespace WDBXEditor
             this.insertLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.advancedDataGridView = new ADGV.AdvancedDataGridView();
             this.cbColumnMode = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.columnFilter = new WDBXEditor.Common.DropdownCheckList();
+            this.progressBar = new WDBXEditor.Common.AutoProgressBar();
+            this.lbFiles = new WDBXEditor.Common.BufferedListBox();
+            this.advancedDataGridView = new ADGV.AdvancedDataGridView();
             this.gbFiles.SuspendLayout();
             this.gbFilter.SuspendLayout();
             this.filecontextMenuStrip.SuspendLayout();
@@ -128,13 +129,13 @@ namespace WDBXEditor
             this.gbFiles.Controls.Add(this.gbFilter);
             this.gbFiles.Controls.Add(this.lbFiles);
             this.gbFiles.Location = new System.Drawing.Point(24, 724);
-            this.gbFiles.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbFiles.Margin = new System.Windows.Forms.Padding(6);
             this.gbFiles.Name = "gbFiles";
-            this.gbFiles.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbFiles.Padding = new System.Windows.Forms.Padding(6);
             this.gbFiles.Size = new System.Drawing.Size(1361, 364);
             this.gbFiles.TabIndex = 1;
             this.gbFiles.TabStop = false;
-            this.gbFiles.Text = "Files";
+            this.gbFiles.Text = "文件列表";
             // 
             // gbFilter
             // 
@@ -145,9 +146,9 @@ namespace WDBXEditor
             this.gbFilter.Controls.Add(this.txtFilter);
             this.gbFilter.Controls.Add(this.label7);
             this.gbFilter.Location = new System.Drawing.Point(840, 35);
-            this.gbFilter.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbFilter.Margin = new System.Windows.Forms.Padding(6);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbFilter.Padding = new System.Windows.Forms.Padding(6);
             this.gbFilter.Size = new System.Drawing.Size(444, 318);
             this.gbFilter.TabIndex = 10;
             this.gbFilter.TabStop = false;
@@ -157,7 +158,7 @@ namespace WDBXEditor
             // 
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReset.Location = new System.Drawing.Point(292, 133);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(6);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(140, 42);
             this.btnReset.TabIndex = 9;
@@ -170,7 +171,7 @@ namespace WDBXEditor
             this.cbBuild.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBuild.FormattingEnabled = true;
             this.cbBuild.Location = new System.Drawing.Point(94, 83);
-            this.cbBuild.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbBuild.Margin = new System.Windows.Forms.Padding(6);
             this.cbBuild.Name = "cbBuild";
             this.cbBuild.Size = new System.Drawing.Size(334, 32);
             this.cbBuild.TabIndex = 4;
@@ -189,7 +190,7 @@ namespace WDBXEditor
             // txtFilter
             // 
             this.txtFilter.Location = new System.Drawing.Point(94, 35);
-            this.txtFilter.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFilter.Margin = new System.Windows.Forms.Padding(6);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(334, 35);
             this.txtFilter.TabIndex = 2;
@@ -204,21 +205,6 @@ namespace WDBXEditor
             this.label7.Size = new System.Drawing.Size(82, 24);
             this.label7.TabIndex = 1;
             this.label7.Text = "Filter";
-            // 
-            // lbFiles
-            // 
-            this.lbFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbFiles.FormattingEnabled = true;
-            this.lbFiles.ItemHeight = 24;
-            this.lbFiles.Location = new System.Drawing.Point(12, 35);
-            this.lbFiles.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.lbFiles.Name = "lbFiles";
-            this.lbFiles.Size = new System.Drawing.Size(816, 316);
-            this.lbFiles.Sorted = true;
-            this.lbFiles.TabIndex = 1;
-            this.lbFiles.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbFiles_MouseDoubleClick);
-            this.lbFiles.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbFiles_MouseDown);
             // 
             // filecontextMenuStrip
             // 
@@ -259,9 +245,9 @@ namespace WDBXEditor
             this.gbSettings.Controls.Add(this.label2);
             this.gbSettings.Controls.Add(this.label1);
             this.gbSettings.Location = new System.Drawing.Point(1397, 725);
-            this.gbSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbSettings.Margin = new System.Windows.Forms.Padding(6);
             this.gbSettings.Name = "gbSettings";
-            this.gbSettings.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbSettings.Padding = new System.Windows.Forms.Padding(6);
             this.gbSettings.Size = new System.Drawing.Size(506, 364);
             this.gbSettings.TabIndex = 2;
             this.gbSettings.TabStop = false;
@@ -278,18 +264,10 @@ namespace WDBXEditor
             this.lblCurrentProcess.Text = "label9";
             this.lblCurrentProcess.Visible = false;
             // 
-            // progressBar
-            // 
-            this.progressBar.Location = new System.Drawing.Point(43, 316);
-            this.progressBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(430, 37);
-            this.progressBar.TabIndex = 10;
-            // 
             // txtStats
             // 
             this.txtStats.Location = new System.Drawing.Point(190, 178);
-            this.txtStats.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtStats.Margin = new System.Windows.Forms.Padding(6);
             this.txtStats.Name = "txtStats";
             this.txtStats.ReadOnly = true;
             this.txtStats.Size = new System.Drawing.Size(292, 35);
@@ -308,7 +286,7 @@ namespace WDBXEditor
             // txtCurrentCell
             // 
             this.txtCurrentCell.Location = new System.Drawing.Point(190, 131);
-            this.txtCurrentCell.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCurrentCell.Margin = new System.Windows.Forms.Padding(6);
             this.txtCurrentCell.Name = "txtCurrentCell";
             this.txtCurrentCell.ReadOnly = true;
             this.txtCurrentCell.Size = new System.Drawing.Size(292, 35);
@@ -327,7 +305,7 @@ namespace WDBXEditor
             // txtCurDefinition
             // 
             this.txtCurDefinition.Location = new System.Drawing.Point(190, 84);
-            this.txtCurDefinition.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCurDefinition.Margin = new System.Windows.Forms.Padding(6);
             this.txtCurDefinition.Name = "txtCurDefinition";
             this.txtCurDefinition.ReadOnly = true;
             this.txtCurDefinition.Size = new System.Drawing.Size(292, 35);
@@ -336,7 +314,7 @@ namespace WDBXEditor
             // txtCurEntry
             // 
             this.txtCurEntry.Location = new System.Drawing.Point(190, 36);
-            this.txtCurEntry.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCurEntry.Margin = new System.Windows.Forms.Padding(6);
             this.txtCurEntry.Name = "txtCurEntry";
             this.txtCurEntry.ReadOnly = true;
             this.txtCurEntry.Size = new System.Drawing.Size(292, 35);
@@ -375,7 +353,7 @@ namespace WDBXEditor
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1927, 43);
+            this.menuStrip.Size = new System.Drawing.Size(1927, 48);
             this.menuStrip.TabIndex = 3;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -393,7 +371,7 @@ namespace WDBXEditor
             this.closeToolStripMenuItem,
             this.closeAllToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(73, 35);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(73, 40);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // loadFilesToolStripMenuItem
@@ -498,7 +476,7 @@ namespace WDBXEditor
             this.replaceToolStripMenuItem,
             this.insertToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(77, 35);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(77, 40);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // newLineToolStripMenuItem
@@ -584,7 +562,7 @@ namespace WDBXEditor
             this.toMPQToolStripMenuItem,
             this.toJSONToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(107, 35);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(107, 40);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // toSQLToolStripMenuItem
@@ -633,7 +611,7 @@ namespace WDBXEditor
             this.fromSQLToolStripMenuItem,
             this.fromCSVToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(111, 35);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(111, 40);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // fromSQLToolStripMenuItem
@@ -661,7 +639,7 @@ namespace WDBXEditor
             this.playerLocationRecorderToolStripMenuItem,
             this.colourPickerToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(95, 35);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(95, 40);
             this.optionsToolStripMenuItem.Text = "Tools";
             // 
             // editDefinitionsToolStripMenuItem
@@ -713,7 +691,7 @@ namespace WDBXEditor
             this.helpToolStripMenuItem1,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(88, 35);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(88, 40);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // helpToolStripMenuItem1
@@ -823,43 +801,12 @@ namespace WDBXEditor
             this.deleteLineToolStripMenuItem.Text = "Delete Line";
             this.deleteLineToolStripMenuItem.Click += new System.EventHandler(this.deleteLineToolStripMenuItem_Click);
             // 
-            // advancedDataGridView
-            // 
-            this.advancedDataGridView.AllowDrop = true;
-            this.advancedDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.advancedDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.advancedDataGridView.ColumnHeadersHeight = 46;
-            this.advancedDataGridView.EnableHeadersVisualStyles = false;
-            this.advancedDataGridView.FilterAndSortEnabled = true;
-            this.advancedDataGridView.HeaderContext = null;
-            this.advancedDataGridView.Location = new System.Drawing.Point(24, 50);
-            this.advancedDataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.advancedDataGridView.Name = "advancedDataGridView";
-            this.advancedDataGridView.RowHeadersWidth = 82;
-            this.advancedDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.advancedDataGridView.RowTemplate.Height = 18;
-            this.advancedDataGridView.Size = new System.Drawing.Size(1879, 663);
-            this.advancedDataGridView.TabIndex = 0;
-            this.advancedDataGridView.UndoRedoChanged += new System.EventHandler(this.advancedDataGridView_UndoRedoChanged);
-            this.advancedDataGridView.SortStringChanged += new System.EventHandler(this.advancedDataGridView_SortStringChanged);
-            this.advancedDataGridView.FilterStringChanged += new System.EventHandler(this.advancedDataGridView_FilterStringChanged);
-            this.advancedDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.advancedDataGridView_CellValueChanged);
-            this.advancedDataGridView.CurrentCellChanged += new System.EventHandler(this.advancedDataGridView_CurrentCellChanged);
-            this.advancedDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.advancedDataGridView_DataBindingComplete);
-            this.advancedDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.advancedDataGridView_RowsAdded);
-            this.advancedDataGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.advancedDataGridView_RowsRemoved);
-            this.advancedDataGridView.DragDrop += new System.Windows.Forms.DragEventHandler(this.advancedDataGridView_DragDrop);
-            this.advancedDataGridView.DragEnter += new System.Windows.Forms.DragEventHandler(this.advancedDataGridView_DragEnter);
-            this.advancedDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.advancedDataGridView_MouseDown);
-            // 
             // cbColumnMode
             // 
             this.cbColumnMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbColumnMode.FormattingEnabled = true;
             this.cbColumnMode.Location = new System.Drawing.Point(864, 6);
-            this.cbColumnMode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbColumnMode.Margin = new System.Windows.Forms.Padding(6);
             this.cbColumnMode.Name = "cbColumnMode";
             this.cbColumnMode.Size = new System.Drawing.Size(326, 32);
             this.cbColumnMode.TabIndex = 10;
@@ -889,6 +836,69 @@ namespace WDBXEditor
             this.columnFilter.ItemCheckChanged += new System.Windows.Forms.ItemCheckEventHandler(this.columnFilter_ItemCheckChanged);
             this.columnFilter.HideEmptyPressed += new System.EventHandler(this.columnFilter_HideEmptyPressed);
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(43, 316);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(6);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(430, 37);
+            this.progressBar.TabIndex = 10;
+            // 
+            // lbFiles
+            // 
+            this.lbFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbFiles.FormattingEnabled = true;
+            this.lbFiles.ItemHeight = 24;
+            this.lbFiles.Location = new System.Drawing.Point(12, 35);
+            this.lbFiles.Margin = new System.Windows.Forms.Padding(6);
+            this.lbFiles.Name = "lbFiles";
+            this.lbFiles.Size = new System.Drawing.Size(816, 316);
+            this.lbFiles.Sorted = true;
+            this.lbFiles.TabIndex = 1;
+            this.lbFiles.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbFiles_MouseDoubleClick);
+            this.lbFiles.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbFiles_MouseDown);
+            // 
+            // advancedDataGridView
+            // 
+            this.advancedDataGridView.AllowDrop = true;
+            this.advancedDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.advancedDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.advancedDataGridView.ColumnHeadersHeight = 46;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.advancedDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.advancedDataGridView.EnableHeadersVisualStyles = false;
+            this.advancedDataGridView.FilterAndSortEnabled = true;
+            this.advancedDataGridView.HeaderContext = null;
+            this.advancedDataGridView.Location = new System.Drawing.Point(24, 50);
+            this.advancedDataGridView.Margin = new System.Windows.Forms.Padding(6);
+            this.advancedDataGridView.Name = "advancedDataGridView";
+            this.advancedDataGridView.RowHeadersWidth = 82;
+            this.advancedDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.advancedDataGridView.RowTemplate.Height = 18;
+            this.advancedDataGridView.Size = new System.Drawing.Size(1879, 663);
+            this.advancedDataGridView.TabIndex = 0;
+            this.advancedDataGridView.VirtualMode = true;
+            this.advancedDataGridView.UndoRedoChanged += new System.EventHandler(this.advancedDataGridView_UndoRedoChanged);
+            this.advancedDataGridView.SortStringChanged += new System.EventHandler(this.advancedDataGridView_SortStringChanged);
+            this.advancedDataGridView.FilterStringChanged += new System.EventHandler(this.advancedDataGridView_FilterStringChanged);
+            this.advancedDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.advancedDataGridView_CellValueChanged);
+            this.advancedDataGridView.CurrentCellChanged += new System.EventHandler(this.advancedDataGridView_CurrentCellChanged);
+            this.advancedDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.advancedDataGridView_DataBindingComplete);
+            this.advancedDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.advancedDataGridView_RowsAdded);
+            this.advancedDataGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.advancedDataGridView_RowsRemoved);
+            this.advancedDataGridView.DragDrop += new System.Windows.Forms.DragEventHandler(this.advancedDataGridView_DragDrop);
+            this.advancedDataGridView.DragEnter += new System.Windows.Forms.DragEventHandler(this.advancedDataGridView_DragEnter);
+            this.advancedDataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.advancedDataGridView_MouseDown);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -904,7 +914,7 @@ namespace WDBXEditor
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(1894, 1121);
             this.Name = "Main";
             this.Tag = "";

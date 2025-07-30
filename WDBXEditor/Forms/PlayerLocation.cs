@@ -162,10 +162,10 @@ namespace WDBXEditor.Forms
             switch (LoadAddresses())
             {
                 case ErrorReason.Gamestate:
-                    MessageBox.Show("Could not read memory. Player must be in game.");
+                    MessageBox.Show("无法读取内存信息. 玩家必须在游戏登录状态方可读取。");
                     break;
                 case ErrorReason.Invalid:
-                    MessageBox.Show("Could not read memory. Invalid offsets or player not in game.");
+                    MessageBox.Show("无法读取内存信息. 错误的偏移值或者玩家并未登录游戏。");
                     break;
                 case ErrorReason.None:
                     btnTarget.Enabled = false;
@@ -217,7 +217,7 @@ namespace WDBXEditor.Forms
             if (string.IsNullOrWhiteSpace(curmap.Name))
                 return;
 
-            if (MessageBox.Show($"Are you sure you wish to delete the offsets for {curmap.Name}?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show($"你确定要删除 {curmap.Name} 的偏移量吗?", "确认", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 offsetmaps.RemoveWhere(x => x.Name == curmap.Name);
                 SaveBuilds();

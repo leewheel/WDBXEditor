@@ -67,7 +67,7 @@
             // txtRed
             // 
             this.txtRed.Location = new System.Drawing.Point(486, 22);
-            this.txtRed.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtRed.Margin = new System.Windows.Forms.Padding(6);
             this.txtRed.MaxLength = 3;
             this.txtRed.Name = "txtRed";
             this.txtRed.Size = new System.Drawing.Size(120, 35);
@@ -78,7 +78,7 @@
             // txtGreen
             // 
             this.txtGreen.Location = new System.Drawing.Point(486, 70);
-            this.txtGreen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtGreen.Margin = new System.Windows.Forms.Padding(6);
             this.txtGreen.MaxLength = 3;
             this.txtGreen.Name = "txtGreen";
             this.txtGreen.Size = new System.Drawing.Size(120, 35);
@@ -89,7 +89,7 @@
             // txtBlue
             // 
             this.txtBlue.Location = new System.Drawing.Point(486, 118);
-            this.txtBlue.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBlue.Margin = new System.Windows.Forms.Padding(6);
             this.txtBlue.MaxLength = 3;
             this.txtBlue.Name = "txtBlue";
             this.txtBlue.Size = new System.Drawing.Size(120, 35);
@@ -110,22 +110,22 @@
             // btnGet
             // 
             this.btnGet.Location = new System.Drawing.Point(298, 351);
-            this.btnGet.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnGet.Margin = new System.Windows.Forms.Padding(6);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(150, 42);
             this.btnGet.TabIndex = 7;
-            this.btnGet.Text = "Get Colour";
+            this.btnGet.Text = "获取颜色";
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
             // 
             // betSet
             // 
             this.betSet.Location = new System.Drawing.Point(460, 351);
-            this.betSet.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.betSet.Margin = new System.Windows.Forms.Padding(6);
             this.betSet.Name = "betSet";
             this.betSet.Size = new System.Drawing.Size(150, 42);
             this.betSet.TabIndex = 8;
-            this.betSet.Text = "Set Colour";
+            this.betSet.Text = "设置颜色";
             this.betSet.UseVisualStyleBackColor = true;
             this.betSet.Click += new System.EventHandler(this.betSet_Click);
             // 
@@ -133,7 +133,7 @@
             // 
             this.picColour.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picColour.Location = new System.Drawing.Point(486, 166);
-            this.picColour.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.picColour.Margin = new System.Windows.Forms.Padding(6);
             this.picColour.Name = "picColour";
             this.picColour.Size = new System.Drawing.Size(122, 50);
             this.picColour.TabIndex = 9;
@@ -142,7 +142,7 @@
             // txtWoWVal
             // 
             this.txtWoWVal.Location = new System.Drawing.Point(486, 292);
-            this.txtWoWVal.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtWoWVal.Margin = new System.Windows.Forms.Padding(6);
             this.txtWoWVal.MaxLength = 10;
             this.txtWoWVal.Name = "txtWoWVal";
             this.txtWoWVal.Size = new System.Drawing.Size(120, 35);
@@ -156,9 +156,9 @@
             this.label4.Location = new System.Drawing.Point(350, 297);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 24);
+            this.label4.Size = new System.Drawing.Size(94, 24);
             this.label4.TabIndex = 10;
-            this.label4.Text = "WoW Value";
+            this.label4.Text = "WoW数值";
             // 
             // colourWheel
             // 
@@ -193,14 +193,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(640, 480);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "ColourConverter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Colour Picker";
+            this.Text = "颜色拾取器";
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.ColourConverter_Activated);
             this.Deactivate += new System.EventHandler(this.ColourConverter_Deactivate);

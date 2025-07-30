@@ -56,7 +56,7 @@
             // 
             this.btnLoad.Enabled = false;
             this.btnLoad.Location = new System.Drawing.Point(418, 329);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(6);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(150, 42);
             this.btnLoad.TabIndex = 7;
@@ -67,7 +67,7 @@
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(580, 329);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 8;
@@ -82,7 +82,7 @@
             // txtFilePath
             // 
             this.txtFilePath.Location = new System.Drawing.Point(74, 24);
-            this.txtFilePath.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFilePath.Margin = new System.Windows.Forms.Padding(6);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.ReadOnly = true;
             this.txtFilePath.Size = new System.Drawing.Size(438, 35);
@@ -91,7 +91,7 @@
             // btnBrowse
             // 
             this.btnBrowse.Location = new System.Drawing.Point(528, 22);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(6);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(160, 42);
             this.btnBrowse.TabIndex = 2;
@@ -115,7 +115,7 @@
             this.chkHeader.Checked = true;
             this.chkHeader.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkHeader.Location = new System.Drawing.Point(74, 114);
-            this.chkHeader.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chkHeader.Margin = new System.Windows.Forms.Padding(6);
             this.chkHeader.Name = "chkHeader";
             this.chkHeader.Size = new System.Drawing.Size(222, 28);
             this.chkHeader.TabIndex = 6;
@@ -127,7 +127,7 @@
             // 
             this.radUpdate.AutoSize = true;
             this.radUpdate.Location = new System.Drawing.Point(244, 72);
-            this.radUpdate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radUpdate.Margin = new System.Windows.Forms.Padding(6);
             this.radUpdate.Name = "radUpdate";
             this.radUpdate.Size = new System.Drawing.Size(221, 28);
             this.radUpdate.TabIndex = 4;
@@ -138,7 +138,7 @@
             // 
             this.radOverride.AutoSize = true;
             this.radOverride.Location = new System.Drawing.Point(454, 72);
-            this.radOverride.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radOverride.Margin = new System.Windows.Forms.Padding(6);
             this.radOverride.Name = "radOverride";
             this.radOverride.Size = new System.Drawing.Size(185, 28);
             this.radOverride.TabIndex = 5;
@@ -150,7 +150,7 @@
             this.radNewOnly.AutoSize = true;
             this.radNewOnly.Checked = true;
             this.radNewOnly.Location = new System.Drawing.Point(74, 72);
-            this.radNewOnly.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radNewOnly.Margin = new System.Windows.Forms.Padding(6);
             this.radNewOnly.Name = "radNewOnly";
             this.radNewOnly.Size = new System.Drawing.Size(161, 28);
             this.radNewOnly.TabIndex = 3;
@@ -172,7 +172,7 @@
             this.panel1.Controls.Add(this.radUpdate);
             this.panel1.Controls.Add(this.chkHeader);
             this.panel1.Location = new System.Drawing.Point(24, 22);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(706, 295);
             this.panel1.TabIndex = 13;
@@ -182,7 +182,7 @@
             this.panel2.Controls.Add(this.rdoFixIds);
             this.panel2.Controls.Add(this.rdoNewest);
             this.panel2.Location = new System.Drawing.Point(300, 109);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 41);
             this.panel2.TabIndex = 22;
@@ -192,7 +192,7 @@
             this.rdoFixIds.AutoSize = true;
             this.rdoFixIds.Checked = true;
             this.rdoFixIds.Location = new System.Drawing.Point(6, 6);
-            this.rdoFixIds.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rdoFixIds.Margin = new System.Windows.Forms.Padding(6);
             this.rdoFixIds.Name = "rdoFixIds";
             this.rdoFixIds.Size = new System.Drawing.Size(125, 28);
             this.rdoFixIds.TabIndex = 20;
@@ -206,7 +206,7 @@
             // 
             this.rdoNewest.AutoSize = true;
             this.rdoNewest.Location = new System.Drawing.Point(130, 6);
-            this.rdoNewest.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rdoNewest.Margin = new System.Windows.Forms.Padding(6);
             this.rdoNewest.Name = "rdoNewest";
             this.rdoNewest.Size = new System.Drawing.Size(173, 28);
             this.rdoNewest.TabIndex = 21;
@@ -259,7 +259,7 @@
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnClose);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(766, 450);
             this.MinimizeBox = false;

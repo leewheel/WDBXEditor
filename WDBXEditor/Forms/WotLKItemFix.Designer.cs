@@ -55,7 +55,7 @@
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(586, 772);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 14;
@@ -68,7 +68,7 @@
             this.ddlTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlTable.FormattingEnabled = true;
             this.ddlTable.Location = new System.Drawing.Point(132, 262);
-            this.ddlTable.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ddlTable.Margin = new System.Windows.Forms.Padding(6);
             this.ddlTable.Name = "ddlTable";
             this.ddlTable.Size = new System.Drawing.Size(402, 32);
             this.ddlTable.TabIndex = 26;
@@ -87,7 +87,7 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(134, 116);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(6);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(546, 35);
             this.txtUser.TabIndex = 3;
@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.txtHost);
             this.panel1.Controls.Add(this.txtPort);
             this.panel1.Location = new System.Drawing.Point(24, 22);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(712, 738);
             this.panel1.TabIndex = 13;
@@ -125,7 +125,7 @@
             this.dgvSchema.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSchema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSchema.Location = new System.Drawing.Point(20, 362);
-            this.dgvSchema.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvSchema.Margin = new System.Windows.Forms.Padding(6);
             this.dgvSchema.Name = "dgvSchema";
             this.dgvSchema.RowHeadersWidth = 82;
             this.dgvSchema.Size = new System.Drawing.Size(664, 371);
@@ -141,7 +141,7 @@
             "CMangos",
             "Trinity"});
             this.ddlTemplate.Location = new System.Drawing.Point(132, 312);
-            this.ddlTemplate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ddlTemplate.Margin = new System.Windows.Forms.Padding(6);
             this.ddlTemplate.Name = "ddlTemplate";
             this.ddlTemplate.Size = new System.Drawing.Size(402, 32);
             this.ddlTemplate.TabIndex = 29;
@@ -160,7 +160,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(550, 212);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(6);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(134, 39);
             this.btnRefresh.TabIndex = 5;
@@ -183,7 +183,7 @@
             this.ddlDatabases.Enabled = false;
             this.ddlDatabases.FormattingEnabled = true;
             this.ddlDatabases.Location = new System.Drawing.Point(134, 212);
-            this.ddlDatabases.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ddlDatabases.Margin = new System.Windows.Forms.Padding(6);
             this.ddlDatabases.Name = "ddlDatabases";
             this.ddlDatabases.Size = new System.Drawing.Size(400, 32);
             this.ddlDatabases.TabIndex = 6;
@@ -222,7 +222,7 @@
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(134, 164);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(546, 35);
             this.txtPass.TabIndex = 4;
@@ -241,7 +241,7 @@
             // txtHost
             // 
             this.txtHost.Location = new System.Drawing.Point(134, 20);
-            this.txtHost.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtHost.Margin = new System.Windows.Forms.Padding(6);
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(546, 35);
             this.txtHost.TabIndex = 1;
@@ -249,7 +249,7 @@
             // txtPort
             // 
             this.txtPort.Location = new System.Drawing.Point(134, 68);
-            this.txtPort.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPort.Margin = new System.Windows.Forms.Padding(6);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(546, 35);
             this.txtPort.TabIndex = 2;
@@ -259,7 +259,7 @@
             // 
             this.btnLoad.Enabled = false;
             this.btnLoad.Location = new System.Drawing.Point(424, 772);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(6);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(150, 42);
             this.btnLoad.TabIndex = 12;
@@ -277,7 +277,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLoad);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(752, 900);
             this.MinimizeBox = false;
